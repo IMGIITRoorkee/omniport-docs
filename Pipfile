@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 sphinx = "*"
 sphinx-autobuild = "*"
+jsx-lexer = "*"
 
 [requires]
 python_version = "3.7"
