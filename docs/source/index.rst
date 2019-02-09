@@ -31,9 +31,10 @@ Contents
 --------
 
 .. toctree::
-   :maxdepth: 2
-   
-   credits
+  :maxdepth: 2
+  
+  introduction/index
+  credits
 
 Music ♪
 -------
