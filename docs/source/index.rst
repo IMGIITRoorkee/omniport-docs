@@ -34,6 +34,7 @@ Contents
   :maxdepth: 2
   
   introduction/index
+  structure/index
   credits
 
 Music ♪
