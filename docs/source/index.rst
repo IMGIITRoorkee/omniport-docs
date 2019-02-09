@@ -35,6 +35,7 @@ Contents
   
   introduction/index
   structure/index
+  how_to/index
   legal/index
   credits
 
