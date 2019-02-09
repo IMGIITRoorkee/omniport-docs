@@ -1,0 +1,5 @@
+# Ignore the built html files
+build/
+
+# Ignore the pickled doctrees
+doctrees/

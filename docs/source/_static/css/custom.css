@@ -1,0 +1,29 @@
+/* Baskerville */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700');
+
+/* Fira Code */
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
+
+::selection {
+    background-color: #5f6fe0;
+    color: white;
+}
+
+body, body * {
+    line-height: 1.75;
+}
+
+pre {
+    border: 1px solid #c6c9cb;
+    box-shadow: 1px 1px 1px #d8d8d8;
+    line-height: 1.3;
+}
+
+.sphinxsidebar a {
+    font-size: 14px !important;
+}
+
+.highlight * {
+    font-weight: 400 !important;  /* Remove all bold text from code blocks */
+}
+
