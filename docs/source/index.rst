@@ -35,6 +35,7 @@ Contents
   
   introduction/index
   structure/index
+  legal/index
   credits
 
 Music ♪
