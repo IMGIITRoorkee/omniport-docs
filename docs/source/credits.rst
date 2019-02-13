@@ -60,11 +60,13 @@ for Omniport. They can be found on GitHub (IMGIITRoorkee_) and on our website_.
 Orchestra
 ---------
 
-Like we said earlier, the orchestra deserves some credit after all.
+Like we said earlier, the orchestra deserves a fair share of credit.
 
 .. image:: /_static/maintainers/wordmark.svg
   :height: 64px
   :alt: IMG wordmark
+
+|
 
 .. _dhruvkb: https://github.com/dhruvkb
 .. _pranjaltale16: https://github.com/pranjaltale16
