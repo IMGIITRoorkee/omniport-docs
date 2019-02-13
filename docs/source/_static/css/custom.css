@@ -19,6 +19,14 @@ pre {
     line-height: 1.3;
 }
 
+div.sphinxsidebarwrapper p.logo {
+    text-align: left;
+}
+
+img.logo {
+    height: 5em;
+}
+
 .sphinxsidebar a {
     font-size: 14px !important;
 }

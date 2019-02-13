@@ -6,7 +6,7 @@ be extensible, customizable, performant and powerful.
 
 .. image:: /_static/site/wordmark.svg
   :target: /
-  :height: 98px
+  :height: 49px
   :align: center
   :alt: Omniport wordmark 
 
