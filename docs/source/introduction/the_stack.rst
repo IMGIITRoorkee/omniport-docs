@@ -47,4 +47,21 @@ release and Omniport is always a rolling distribution.
 |                       | *Bundler*             |  Webpack              |
 +-----------------------+-----------------------+-----------------------+
 
-| 
+- Tier I (no dependencies on other infrastructure)
+
+  - Message broker
+  - Channel layer
+  - Session store
+  - Notification store
+  - Database
+  - Cache
+
+- Tier II (depend on and wait for Tier I to be ready)
+
+  - Intranet server
+  - Internet server
+  - Redis GUI
+
+- Tier III (depend on and wait for Tier II to be ready)
+
+  - Reverse proxy
