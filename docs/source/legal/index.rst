@@ -10,6 +10,7 @@ all bound by as developers, sharing code and knowledge in the fair market that
 is open-source.
 
 .. toctree::
-   :maxdepth: 2
+  :maxdepth: 2
 
-   developer_terms_of_use
+  developer_terms_of_use
+  brand_usage_guide/index
