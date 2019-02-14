@@ -36,6 +36,7 @@ Contents
   introduction/index
   structure/index
   environments/index
+  setting_up/index
   how_to/index
   legal/index
   credits
