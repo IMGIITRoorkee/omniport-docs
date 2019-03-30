@@ -63,11 +63,7 @@ Ideals
   Almost the entire project can be configured via external YAML and ENV files
   without touching a single line of code.
 
-Open-source
------------
+- **Open-source**
 
-Omniport is a product of, runs on, and therefore is, open-source. All aspects 
-of Omniport, *including this documentation for some reason*, are licensed under 
-the GNU GPLv3 license.
-
-Omniport ❤️ FOSS
+  From the tech stack to the dependencies, Omniport is built on open-source. It
+  only makes sense to give back to the wonderful community.
