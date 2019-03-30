@@ -1,5 +1,5 @@
 # Ignore the built html files
-build/
+/build/
 
 # Ignore the pickled doctrees
 doctrees/
