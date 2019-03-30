@@ -14,3 +14,4 @@ is open-source.
 
   developer_terms_of_use
   brand_usage_guide/index
+  open_source
