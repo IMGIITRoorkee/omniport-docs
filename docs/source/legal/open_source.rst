@@ -20,7 +20,7 @@ GNU General Public License version 3
 All code pertaining to Omniport, including but not limited to its core, its
 services and apps ecosystem and snippets thereof is licensed under the GNU
 General Public License or GPL. The license can be read in its entirety on the
-`GNU website <https://www.gnu.org/licenses/gpl.html>`_.
+`GPL page on the GNU website <https://www.gnu.org/licenses/gpl.html>`_.
 
 GNU Free Documentation License
 ------------------------------
@@ -35,7 +35,7 @@ GNU Free Documentation License
 All documentation pertaining to Omniport, including but not limited to this
 manual, excerpts thereof and other technical articles, is licensed under the GNU
 Free Documentation License or FDL. The license can be read in its entirety on
-the `GNU website <https://www.gnu.org/licenses/fdl-1.3.html>`_.
+the `FDL page on the GNU website <https://www.gnu.org/licenses/fdl-1.3.html>`_.
 
 Other licenses
 --------------
