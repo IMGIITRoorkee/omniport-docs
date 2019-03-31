@@ -30,7 +30,7 @@ the frontend.
 .. seealso:: 
   
   More on frontend configuration files
-  :doc:`here <../references/config_files/config_json>`.
+  :doc:`here <../references/config_files/app/config_json>`.
 
 For an example, consider the service 'Developer', which is used by developers to
 develop OAuth2 based applications on Omniport.
@@ -45,7 +45,7 @@ using the ``clone_codebase.sh`` script provided by ``omniport-docker``.
 .. seealso::
 
   More on the ``clone-codebase.sh`` script
-  :doc:`here <../references/scripts/docker/clone_codebase>`.
+  :doc:`here <../references/scripts/docker/clone/everything>`.
 
 Apps
 ----
@@ -66,7 +66,7 @@ apps on the backend.
 .. seealso:: 
   
   More on backend configuration files
-  :doc:`here <../references/config_files/config_yml>`.
+  :doc:`here <../references/config_files/app/config_yml>`.
 
 .. math::
 

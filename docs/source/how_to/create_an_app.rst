@@ -62,7 +62,8 @@ example.
 
 .. seealso::
 
-  For more information on ``config.yml`` see :doc:`this <../references/config_files/config_yml>`.
+  For more information on ``config.yml`` see :doc:`this
+  <../references/config_files/app/config_yml>`.
 
 ``http_urls.py``
 ++++++++++++++++
@@ -129,7 +130,8 @@ internal name, the display name and the URLs as shown in the example.
 
 .. seealso::
 
-  For more information on ``config.json`` see :doc:`this <../references/config_files/config_json>`.
+  For more information on ``config.json`` see :doc:`this
+  <../references/config_files/app/config_json>`.
 
 ``index.js``
 ++++++++++++

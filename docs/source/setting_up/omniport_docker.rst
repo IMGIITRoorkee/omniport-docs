@@ -13,7 +13,7 @@ from GitHub.
 .. note::
 
   You may use the 
-  :doc:`clone codebase script <../references/scripts/docker/clone_codebase>` 
+  :doc:`clone codebase script <../references/scripts/docker/clone/everything>` 
   to accomplish the same goal.
 
 Configuring the environment
@@ -54,7 +54,7 @@ Base-level configuration
 
 Copy ``base_stencil.yml`` to ``base.yml`` and populate all the variables there.
 If you need help, refer to the :doc:`documentation on this file
-<../references/config_files/base_yml>`.
+<../references/config_files/project/base_yml>`.
 
 Site-level configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -65,7 +65,7 @@ In ``sites/``, copy ``site_stencil.yml`` to
 - ``site_1.yml`` and ``site_2.yml`` in production
 
 and populate all the variables there. If you need help, refer to the
-:doc:`documentation on this file <../references/config_files/site_id_yml>`.
+:doc:`documentation on this file <../references/config_files/project/site_yml>`.
 
 NGINX
 +++++

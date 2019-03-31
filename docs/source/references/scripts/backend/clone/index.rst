@@ -14,4 +14,4 @@ setting up the codebase.
 
   everything
   services
-  formula_one
+  shell

@@ -84,7 +84,7 @@ Defaults will be provided for these images.
   *for reference* when designing your own, if designing your own.
 
   If not redesigning your own icons, be sure to respect the 
-  :doc:`Brand usage guide <../legal/brand_usage_guide>`.
+  :doc:`Brand usage guide <../legal/brand_usage_guide/index>`.
 
 Batteries-not-included
 ++++++++++++++++++++++
