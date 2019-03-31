@@ -24,32 +24,32 @@ Omniport project, mainly the textual aspect of branding. It requires the
     | ``{object}`` which has the following subkeys
 
       :acronym:
-      | Acronyms of institutes which have long names
-      | ``string``
+        | Acronyms of institutes which have long names
+        | ``string``
 
       :name:
-      | The full name of the institute
-      | ``string``
+        | The full name of the institute
+        | ``string``
 
       :homePage:
-      | The URL to the home page of the institute on the web
-      | ``string``
+        | The URL to the home page of the institute on the web
+        | ``string``
 
   :maintainers:
     | Attributes pertaining to the brand of the maintainers behind the portal
     | ``{object}`` which has the following subkeys
 
       :acronym:
-      | Acronyms of maintainer groups which have long names
-      | ``string``
+        | Acronyms of maintainer groups which have long names
+        | ``string``
 
       :name:
-      | The full name of the maintainer group
-      | ``string``
+        | The full name of the maintainer group
+        | ``string``
 
       :homePage:
-      | The URL to the home page of the maintainer group on the web
-      | ``string``
+        | The URL to the home page of the maintainer group on the web
+        | ``string``
 
 Internationalisation
 ++++++++++++++++++++
@@ -100,92 +100,92 @@ these settings have to be their default values as shown in the
     | ``{object}`` which has the following subkeys
 
       :host:
-      | The IP/name of the host machine or container running this service
-      | ``string``
+        | The IP/name of the host machine or container running this service
+        | ``string``
 
       :port:
-      | The port on which the service can be reached
-      | ``string``
+        | The port on which the service can be reached
+        | ``string``
 
       :user:
-      | The username that can be used to log in to the service
-      | ``string``
+        | The username that can be used to log in to the service
+        | ``string``
 
       :password:
-      | The password for the given user
-      | ``string``
+        | The password for the given user
+        | ``string``
 
       :name:
-      | The name of the database to use
-      | ``string``
+        | The name of the database to use
+        | ``string``
 
   :messageBroker:
     | Attributes pertaining to message broker service
     | ``{object}`` which has the following subkeys
 
       :host:
-      | The IP/name of the host machine or container running this service
-      | ``string``
+        | The IP/name of the host machine or container running this service
+        | ``string``
 
       :port:
-      | The port on which the service can be reached
-      | ``string``
+        | The port on which the service can be reached
+        | ``string``
 
       :user:
-      | The username that can be used to log in to the service
-      | ``string``
+        | The username that can be used to log in to the service
+        | ``string``
 
       :password:
-      | The password for the given user
-      | ``string``
+        | The password for the given user
+        | ``string``
 
   :channelLayer:
     | Attributes pertaining to Redis container supporting Django Channels
     | ``{object}`` which has the following subkeys
 
       :host:
-      | The IP/name of the host machine or container running this service
-      | ``string``
+        | The IP/name of the host machine or container running this service
+        | ``string``
 
       :port:
-      | The port on which the service can be reached
-      | ``string``
+        | The port on which the service can be reached
+        | ``string``
 
   :sessionStore:
     | Attributes pertaining to Redis container storing sessions
     | ``{object}`` which has the following subkeys
 
       :host:
-      | The IP/name of the host machine or container running this service
-      | ``string``
+        | The IP/name of the host machine or container running this service
+        | ``string``
 
       :port:
-      | The port on which the service can be reached
-      | ``string``
+        | The port on which the service can be reached
+        | ``string``
 
   :notificationStore:
     | Attributes pertaining to Redis container storing notifications
     | ``{object}`` which has the following subkeys
 
       :host:
-      | The IP/name of the host machine or container running this service
-      | ``string``
+        | The IP/name of the host machine or container running this service
+        | ``string``
 
       :port:
-      | The port on which the service can be reached
-      | ``string``
+        | The port on which the service can be reached
+        | ``string``
 
   :cache:
     | Attributes pertaining to the Memcached cache
     | ``{object}`` which has the following subkeys
 
       :host:
-      | The IP/name of the host machine or container running this service
-      | ``string``
+        | The IP/name of the host machine or container running this service
+        | ``string``
 
       :port:
-      | The port on which the service can be reached
-      | ``string``
+        | The port on which the service can be reached
+        | ``string``
     
 IP address rings
 ++++++++++++++++

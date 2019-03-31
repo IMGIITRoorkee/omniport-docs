@@ -47,12 +47,12 @@ the config file.
       | ``string``
 
   :debug:
-  | Whether to display debug info, should be ``false`` on production sites
-  | ``boolean``
+    | Whether to display debug info, should be ``false`` on production sites
+    | ``boolean``
 
   :description:
-  | The description of the site, as an aid to help developers find their way
-  | ``string``
+    | The description of the site, as an aid to help developers find their way
+    | ``string``
 
 Allowances
 ----------
