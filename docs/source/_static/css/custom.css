@@ -35,3 +35,14 @@ img.logo {
     font-weight: 400 !important;  /* Remove all bold text from code blocks */
 }
 
+kbd {
+    padding: 0.1em 0.5em;
+    border: 1px solid #cccccc;
+    margin: 0 0.1em;
+    border-radius: 0.25em;
+    background-color: #f7f7f7;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #ffffff inset;
+    display: inline-block;
+    line-height: 1.5;
+    white-space: nowrap;
+}
