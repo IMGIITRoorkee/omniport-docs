@@ -21,5 +21,6 @@ of Omniport that developers would want to incorporate into their apps.
   :caption: Subsections:
   :maxdepth: 2
 
+  formula_one/index
   scripts/index
   config_files/index
