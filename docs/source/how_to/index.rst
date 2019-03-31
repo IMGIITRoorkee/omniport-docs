@@ -22,6 +22,7 @@ comfortable.
    :caption: Subsections:
    :maxdepth: 2
 
+   brand_omniport
    create_an_app
    use_oauth2
    
