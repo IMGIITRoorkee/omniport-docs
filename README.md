@@ -22,7 +22,6 @@ _This here, is only the documentation of the project, not the project iself._
 - Branch out to `a_meaningful_branch_name`.
 - Send in a `WIP: Pull request`.
 - Commit your changes.
-- Add your name to `CONTRIBUTORS.md`.
 - Get your pull request merged.
 
 It's that simple!
