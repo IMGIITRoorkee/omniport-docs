@@ -13,3 +13,5 @@ flags and options.
    :maxdepth: 2
 
    docker/index
+   backend/index
+   frontend/index
