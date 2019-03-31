@@ -46,3 +46,12 @@ kbd {
     line-height: 1.5;
     white-space: nowrap;
 }
+
+.ethical-alabaster {
+    opacity: 0.2;
+    transition: opacity 1s;
+}
+
+.ethical-alabaster:hover {
+    opacity: 1;
+}
