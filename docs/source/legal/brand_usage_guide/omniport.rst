@@ -19,21 +19,21 @@ Logo usage
 
   All ``em`` units are on a ``14px`` baseline.
 
-.. figure:: /_static/site/logo.svg
-  :figwidth: 100%
+.. image:: /_static/site/logo.svg
+  :target: /
   :height: 49px
-  :align: left
+  :align: center
   :alt: Omniport logo
 
-  Omniport logo at ``3.5em``
+Omniport logo at ``3.5em``
 
-.. figure:: /_static/site/wordmark.svg
-  :figwidth: 100%
+.. image:: /_static/site/wordmark.svg
+  :target: /
   :height: 49px
-  :align: left
+  :align: center
   :alt: Omniport wordmark
 
-  Omniport wordmark at ``3.5em``
+Omniport wordmark at ``3.5em``
 
 Clear spacing
 +++++++++++++
