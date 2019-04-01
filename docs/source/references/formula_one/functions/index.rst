@@ -7,7 +7,7 @@ advantage is that advancements to the metaphorical wheel can be reaped by all
 users automatically.
 
 .. toctree::
-   :caption: Subsections:
+  :caption: Subsections:
 
   get_cookie
   if_role
