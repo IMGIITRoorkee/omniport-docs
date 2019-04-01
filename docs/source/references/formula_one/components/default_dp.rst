@@ -13,7 +13,7 @@ Props
     :Type:
       ``string``
     :Default:
-      **\*required*
+      **\*required**
     :Description:
       | the string whose first letter will be shown in the component
 
