@@ -19,21 +19,21 @@ Logo usage
 
   All ``em`` units are on a ``16px`` baseline.
 
-.. image:: /_static/maintainers/logo.svg
-  :target: /
+.. figure:: /_static/maintainers/logo.png
+  :figwidth: 100%
   :height: 48px
   :align: center
   :alt: Information Management Group logo
 
-Information Management Group logo at ``3em``
+  Information Management Group logo at ``3em``
 
-.. image:: /_static/maintainers/wordmark.svg
-  :target: /
+.. figure:: /_static/maintainers/wordmark.png
+  :figwidth: 100%
   :height: 48px
   :align: center
   :alt: Information Management Group wordmark
 
-Information Management Group wordmark at ``3em``
+  Information Management Group wordmark at ``3em``
 
 Clear spacing
 +++++++++++++

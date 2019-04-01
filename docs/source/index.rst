@@ -4,11 +4,13 @@ Omniport
 Omniport is a portal for educational institutes, designed from the ground up to
 be extensible, customizable, performant and powerful.
 
-.. image:: /_static/site/wordmark.svg
+.. figure:: /_static/site/wordmark.png
   :target: /
   :height: 49px
   :align: center
   :alt: Omniport wordmark 
+
+  The very classy Omniport wordmark
 
 Omniport also comes with a powerful collection of apps and is simple enough for 
 you to be able to write your own.

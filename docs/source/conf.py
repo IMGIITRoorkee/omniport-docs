@@ -96,7 +96,7 @@ WHITE = '#ffffff'
 html_theme_options = {
     # Sidebar
     'fixed_sidebar': True,
-    'logo': 'site/logo.svg',
+    'logo': 'site/logo.png',
     'description': ' ',  # Adds a bit of space below the logo
     
     # GitHub

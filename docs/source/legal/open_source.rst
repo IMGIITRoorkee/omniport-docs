@@ -13,6 +13,7 @@ GNU General Public License version 3
 .. figure:: /_static/licenses/gnu_gplv3.png
   :figwidth: 100%
   :height: 51px
+  :align: center
   :alt: GNU GPLv3 logo
 
   All code is licensed under GNU GPLv3.
@@ -28,6 +29,7 @@ GNU Free Documentation License
 .. figure:: /_static/licenses/gnu_fdl.png
   :figwidth: 100%
   :height: 44px
+  :align: center
   :alt: GNU FDL logo
 
   All documentation is licensed under GNU FDL.
