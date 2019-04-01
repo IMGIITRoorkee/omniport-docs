@@ -15,12 +15,18 @@ The Zen of Omniport
 In a fashion similar to Python's, here is a zen poem that somewhat guides the
 decisions behind Omniport.
 
-    | *Don't repeat yourself. Ever. Ever. Oh wait, my bad. Sorry.*
-    | *Focus on the essential. Everything else, like this sentence, is irrelevant.*
-    | *Bike-shedding is the best way to annihilate time. Let's discuss button colors.*
-    | *Roles are just temporary hats people wear. Apps put personas on roles.*
-    | *Generalised is better than hardcoded. Customisable is better than generalised.*
-    | *Development should be exciting, deployment should not.*
+  | **Don't repeat yourself.** 
+    Ever. Ever. Oh wait, my bad. Sorry.
+  | **Focus on the essential.** 
+    Everything else, like this sentence, is irrelevant.
+  | **Bike-shedding is the best way to annihilate time.** 
+    Let's discuss button colors.
+  | **Roles are just temporary hats people wear.** 
+    Apps put personas on roles.
+  | **Generalised is better than hardcoded.** 
+    Customisable is better than generalised.
+  | **Development should be exciting.** 
+    Deployment should not.
 
 Significance
 ------------
