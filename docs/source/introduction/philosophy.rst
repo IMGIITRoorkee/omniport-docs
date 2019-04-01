@@ -20,10 +20,10 @@ decisions behind Omniport.
   | **Focus on the essential.** 
     Everything else, like this sentence, is irrelevant.
   | **Bike-shedding is the best way to annihilate time.** 
-    Let's discuss button colors.
+    Let's discuss button colours.
   | **Roles are just temporary hats people wear.** 
-    Apps put personas on roles.
-  | **Generalised is better than hardcoded.** 
+    Apps put personae on roles.
+  | **Generalised is better than hard-coded.** 
     Customisable is better than generalised.
   | **Development should be exciting.** 
     Deployment should not.
