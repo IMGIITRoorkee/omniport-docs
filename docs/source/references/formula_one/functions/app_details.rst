@@ -23,12 +23,13 @@ Parameters
 
 #. ``appName``
 
-  :Type:
-    ``string``
-  :Default:
-    **\*required**
-  :Description:
-    the app whose config object is required (**not** ``appDisplayName``)
+    :Type:
+      ``string``
+    :Default:
+      **\*required**
+    :Description:
+      the app whose config object is required (**not** ``appDisplayName``)
+
 Return
 ------
 
