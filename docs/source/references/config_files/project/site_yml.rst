@@ -79,3 +79,46 @@ network rings each site is allowed on.
     | These names are ring names from :doc:`the base config file <base_yml>`
     | ``[string]``
 
+Examples
+--------
+
+A site-level configuration for a typical development site ``site_0.yml`` looks
+like this.
+
+.. code-block:: yaml
+
+  site:
+    id: 0
+    nomenclature:
+      name: development
+      verboseName: Omniport Dev
+    debug: true
+    description: Development site for Omniport
+  allowances:
+    apps: __all__
+    ipAddressRings:
+    - self
+    - specifics
+    - maintainers
+    - intranet
+
+A site-level configuration for a typical production site, more specifically the
+Intranet site ``site_1.yml`` looks like this.
+
+.. code-block:: yaml
+
+  site:
+    id: 1
+    nomenclature:
+      name: intranet
+      verboseName: Omniport Intranet
+    debug: true
+    description: Intranet site for Omniport
+  allowances:
+    hosts:
+    - omniport.intranet
+    - intranet.channeli.in
+    ipAddressRings:
+    - intranet
+    - maintainers
+    - specifics

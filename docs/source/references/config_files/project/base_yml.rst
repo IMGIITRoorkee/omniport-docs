@@ -214,3 +214,64 @@ These rings are described here, in the ``ipAddressRings`` key.
 
 Examples
 --------
+
+A fully equipped ``base.yml`` file, with all settings populated looks quite like
+this.
+
+.. code-block:: yaml
+
+  branding:
+    institute:
+      acronym: IIT-R
+      name: Indian Institute of Technology Roorkee
+      homePage: https://iitr.ac.in/
+    maintainers:
+      acronym: IMG
+      name: Information Management Group
+      homePage: https://channeli.in/img/
+  i18n:
+    languageCode: en-gb
+    timeZone: Asia/Kolkata
+  secrets:
+    secretKey: '2)@2klj=@a(*o9kyt7u^!g4jbqrqo3$ju^o_g6n*lh-d$$#zdy'
+  services:
+    database:
+      host: database
+      port: 5432
+      user: omniport_user
+      password: omniport_password
+      name: omniport_database
+    channelLayer:
+      host: channel-layer
+      port: 6379
+    sessionStore:
+      host: session-store
+      port: 6379
+    notificationStore:
+      host: notification-store
+      port: 6379
+    cache:
+      host: cache
+      port: 11211
+    messageBroker:
+      host: message-broker
+      port: 5672
+      user: omniport_user
+      password: omniport_password
+  ipAddressRings:
+  - name: self
+    patterns:
+    - '^172\.18\.0\.1$'
+  - name: specifics
+    patterns:
+    - '^172\.25\.55\.101$'
+    - '^172\.25\.55\.219$'
+  - name: maintainers
+    patterns:
+    - '^172\.25\.55\.\d{1}$'
+  - name: intranet
+    patterns:
+    - '.*'
+  - name: internet
+    patterns:
+    - '.*'
