@@ -14,5 +14,6 @@ Read more about the offerings of Formula 1 in these documents.
   :caption: Subsections:
   :maxdepth: 2
 
+  components/index
   functions/index
   urls
