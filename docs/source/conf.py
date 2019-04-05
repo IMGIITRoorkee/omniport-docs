@@ -30,7 +30,7 @@ white = '#ffffff'
 
 # Versioning
 version = ''
-release = 'Rolling release'
+release = ''
 
 
 #########################
