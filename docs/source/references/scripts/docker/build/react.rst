@@ -1,5 +1,5 @@
-Django
-======
+React
+=====
 
 This script builds the React container that is responsible for operating the 
 frontend powering Omniport.
