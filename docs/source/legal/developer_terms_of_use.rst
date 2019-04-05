@@ -1,8 +1,8 @@
 Developer terms of use 
 ======================
 
-§0 Preamble 
------------
+Preamble 
+--------
 
 These Omniport developer terms of use (the "developer terms") are between the
 Information Managment Group ("IMG"), the individual or organisation managing the
@@ -20,18 +20,18 @@ the developer uses the platform on behalf of another individual or organisation,
 the developer must have the authority to bind that entity to these terms,
 otherwise cease the use of the platform and its features entirely.
 
-§1 OAuth2 applications
-----------------------
+OAuth2 applications
+-------------------
 
-§1.1 Use of the platform
-++++++++++++++++++++++++
+Use of the platform
++++++++++++++++++++
 
 The developer will comply with all Omniport policies. The maintainers of the
 running instance of Omniport will, at their discretion, approve or deny any
 application submitted for review.
 
-§1.2 Prohibited actions
-+++++++++++++++++++++++
+Prohibited actions
+++++++++++++++++++
 
 The developer warrants that it will not (attempt to)
 
@@ -42,8 +42,8 @@ The developer warrants that it will not (attempt to)
 - mislead users to collect, alter, use or delete user data without the explicit
   consent of the user.
 
-§1.3 Platform usage
-+++++++++++++++++++
+Platform usage
+++++++++++++++
 
 The maintainers in their infinite wisdom, may, in their own discretion, choose
 to
@@ -58,16 +58,16 @@ to
   backwards compatible. Any applications using the API endpoints may need to be
   reworked.
 
-§1.4 Open-source
-++++++++++++++++
+Open-source
++++++++++++
 
 The platform and all of its services are open-source. The source code of these
 are accessible online. However there are a few components and apps of the
 platform that are not open-source and will never be. The developer must respect
 the licenses of all of these components.
 
-§2 Security
------------
+Security
+--------
 
 To the extent the developer possesses or has access to any token issued by the
 platform, the developer must
@@ -99,8 +99,8 @@ platform, the developer must
   page as a proxy or use a layout or design anywhere on your site that may lead
   the user to believe they are on the platform.
 
-§3 User data
-------------
+User data
+---------
 
 The developer must
 
@@ -114,8 +114,8 @@ The developer must
 - never override the users' instructions, preferences or authorisations in the
   use or disclosure of their data.
 
-§4 Other platforms and users
-----------------------------
+Other platforms and users
+-------------------------
 
 The developer is responsible for
 
@@ -128,16 +128,16 @@ The developer is responsible for
   part of it and that the maintainers do not, in any way, endorse or condone any
   action undertaken by the app or the developer.
 
-§5 Intellectual property
-------------------------
+Intellectual property
+---------------------
 
-§5.1 Omniport trademark license
-+++++++++++++++++++++++++++++++
+Omniport trademark license
+++++++++++++++++++++++++++
 
 The maintainers grant the developer a non-exclusive, non-transferable,
 non-sublicenseable, revocable license to use the Omniport marks solely to
 promote the app, provided that developer may not imply that the maintainers
-created, support, or endorse the app in any way pertaining to `§4 Other 
+created, support, or endorse the app in any way pertaining to `Other 
 platforms and users`_.
 
 This license is subject to these terms, applicable law, and the Omniport
@@ -147,8 +147,8 @@ marks will inure to the sole benefit of the platform.
 The developer also agrees not to contest or aid in contesting IMG's rights in,
 or the validity of, the Omniport marks.
 
-§5.2 Developer trademark license
-++++++++++++++++++++++++++++++++
+Developer trademark license
++++++++++++++++++++++++++++
 
 The developer must grant to the maintainers a non- exclusive, non-transferable
 license to use the app marks and descriptive materials that developer publishes
@@ -161,8 +161,8 @@ the developer provides to the maintainers, except to the extent the trademark
 usage guidelines require further permission for the uses described above or
 conflict with these terms.
 
-§5.3 Reservation of rights
-++++++++++++++++++++++++++
+Reservation of rights
++++++++++++++++++++++
 
 Omniport reserves all right, title and interest in the marks pertaining to the
 platform. Equivalently the developer reserves all right, title and interest
@@ -171,8 +171,8 @@ pertaining to the app.
 Except as explicitly set forth herein, the terms do not grant anyone any right
 in another entity's marks or other intellectual property.
 
-§6 Confidentiality
-------------------
+Confidentiality
+---------------
 
 The maintainers and the developer may disclose confidential information to each
 other. The receiving party may use the disclosing party’s confidential
@@ -203,14 +203,14 @@ Confidentiality obligations do not apply to the extent the information
   harm, and the disclosing party may seek immediate equitable relief, in addition
   to other rights and remedies it may have.
 
-§7 Termination
---------------
+Termination
+-----------
 
 These terms will remain in force unless terminated as stipulated in the
 subsections below.
 
-§7.1 Termination by IMG
-+++++++++++++++++++++++
+Termination by IMG
+++++++++++++++++++
 
 IMG may terminate these terms or suspend developer’s access to all or any part
 of the platform
@@ -227,8 +227,8 @@ of the platform
 - for any other reason with 30 days prior written notice to the developer.
 - in order to assess or address any imminent or potential security threat.
 
-§7.2 Termination by the developer
-+++++++++++++++++++++++++++++++++
+Termination by the developer
+++++++++++++++++++++++++++++
 
 The developer may terminate these yerms at any time by ceasing all use of the
 platform (including use by the apps) and by either
@@ -239,8 +239,8 @@ platform (including use by the apps) and by either
   constitute termination on part of the developer because the app will still be
   active and will be under the responsibility of the developer.
 
-§7.3 Effect of termination
-++++++++++++++++++++++++++
+Effect of termination
++++++++++++++++++++++
 
 If these terms are terminated
 
@@ -253,13 +253,13 @@ If these terms are terminated
 
 The following terms will survive the termination of the agreement
 
-- `§1.2 Prohibited actions`_
-- `§1.3 Platform usage`_
-- `§3 User data`_
-- `§5 Intellectual property`_ - `§15 Definitions`_
+- `Prohibited actions`_
+- `Platform usage`_
+- `User data`_
+- `Intellectual property`_ - `Definitions`_
 
-§8 Warranties
--------------
+Warranties
+----------
 
 The developer represents and warrants that
 
@@ -271,23 +271,23 @@ The developer represents and warrants that
   the intellectual property rights, or other rights of others, or violate any
   laws.
 
-§9 Indemnity
-------------
+Indemnity
+---------
 
 The developer will indemnify, defend and hold Dropbox and its affiliates
 harmless from all costs and expenses arising from any third party claim relating
 to any breach or omission on the developer's part in upholding these terms.
 
-§10 Disclaimer
---------------
+Disclaimer
+----------
 
 THE OMNIPORT SERVICE, PLATFORM AND SOFTWARE ARE PROVIDED "AS IS", AT YOUR OWN
 RISK, WITHOUT EXPRESS OR IMPLIED WARRANTY OR CONDITION OF ANY KIND. IMG AND THE
 LOCAL INSTANCE MAINTAINERS DISCLAIM ANY WARRANTIES OF TITLE, MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT.
 
-§11 Limitation of liability
----------------------------
+Limitation of liability
+-----------------------
 
 TO THE FULLEST EXTENT PERMITTED BY LAW, IN NO EVENT WILL OMNIPORT, IMG, THE
 LOCAL INSTANCE MAINTAINERS, THEIR AFFILIATES, OR AGENTS BE LIABLE FOR
@@ -300,7 +300,7 @@ KNOWN OF THE POSSIBILITY OF SUCH DAMAGES. TO THE FULLEST EXTENT PERMITTED BY
 LAW, THE MAXIMUM LIABILITY OF AGGREGATE LIABILITY OF ALL AFOREMENTIONED PARTIES
 WILL NOT EXCEED 0 (ZERO, ZILCH, NADA, NIL) IN THE CURRENCY OF YOUR CHOICE.
 
-§12 Modification
+Modification
 ----------------
 
 IMG may revise these terms from time to time. If, in the maintainers' sole
@@ -313,8 +313,8 @@ website, and the developer is responsible for checking these postings regularly.
 By continuing to access or use the platform after revisions become effective,
 developer agrees to be bound by the revised terms.
 
-§13 Disputes
-------------
+Disputes
+--------
 
 None of the parties on the side on IMG including, but not limited to,
 affiliates, agents and local instance maintainers will ever indulge a dispute
@@ -323,8 +323,8 @@ chance as a snowball in hell given that IMG is a student organisation running an
 awesome non-profit project to make every college on a planet a
 technology-enhanced place.
 
-§14 Miscellaneous
------------------
+Miscellaneous
+-------------
 
 These developer terms constitute the entire and exclusive agreement between the
 developer and IMG with respect to the platform, and supersede and replace any
@@ -350,10 +350,10 @@ IMG can be reached at
   UTTARAKHAND, INDIA (IN)
   ATTN.: CHIEF COORDINATORS
 
-§15 Definitions
-----------------
+Definitions
+-----------
 
-In addition to the definitions in the `§0 Preamble`_ of the terms, the following 
+In addition to the definitions in the `Preamble`_ of the terms, the following 
 definitions are to be understood in context of the terms expressed above.
 
 ==================================== ===================================================================================
