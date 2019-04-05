@@ -19,7 +19,7 @@ Logo usage
 
   All ``em`` units are on a ``14px`` baseline.
 
-.. figure:: /_static/site/logo.png
+.. figure:: /_static/site/op_logo.png
   :figwidth: 100%
   :height: 49px
   :align: center
@@ -27,7 +27,7 @@ Logo usage
 
   Omniport logo at ``3.5em``
 
-.. figure:: /_static/site/wordmark.png
+.. figure:: /_static/site/op_wordmark.png
   :figwidth: 100%
   :height: 49px
   :align: center

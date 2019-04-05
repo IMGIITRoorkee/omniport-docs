@@ -62,7 +62,7 @@ Orchestra
 
 Like we said earlier, the orchestra deserves a fair share of credit.
 
-.. figure:: /_static/maintainers/wordmark.png
+.. figure:: /_static/maintainers/img_wordmark.png
   :figwidth: 100%
   :height: 64px
   :align: center

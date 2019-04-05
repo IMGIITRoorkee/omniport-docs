@@ -19,7 +19,7 @@ Logo usage
 
   All ``em`` units are on a ``16px`` baseline.
 
-.. figure:: /_static/maintainers/logo.png
+.. figure:: /_static/maintainers/img_logo.png
   :figwidth: 100%
   :height: 48px
   :align: center
@@ -27,7 +27,7 @@ Logo usage
 
   Information Management Group logo at ``3em``
 
-.. figure:: /_static/maintainers/wordmark.png
+.. figure:: /_static/maintainers/img_wordmark.png
   :figwidth: 100%
   :height: 48px
   :align: center
