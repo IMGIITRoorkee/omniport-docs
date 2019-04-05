@@ -29,9 +29,6 @@ do with it.
 
 *Happy development!*
 
-Contents
---------
-
 .. toctree::
   :maxdepth: 2
   
@@ -51,10 +48,8 @@ If Omniport was a symphony, which it is if you look closely enough, the setup
 would be this.
 
 :Composers:
-  `Dhruv Bhanushali <https://dhruvkb.github.io/>`_,
-  `Praduman Goyal <https://pradumangoyal.github.io/>`_
+  | `Dhruv Bhanushali <https://dhruvkb.github.io/>`_
+  | `Praduman Goyal <https://pradumangoyal.github.io/>`_
 :Orchestra: 
-  `Information Management Group <https://img.channeli.in/>`_,
-  `IIT Roorkee <https://iitr.ac.in/>`_
-
-|
+  | `Information Management Group <https://img.channeli.in/>`_,
+  | `IIT Roorkee <https://iitr.ac.in/>`_
