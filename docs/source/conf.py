@@ -147,9 +147,6 @@ epub_exclude_files = [
 # LaTeX #
 #########
 
-# The engine to use to compile .tex files
-latex_engine = 'xelatex'
-
 # LaTeX snippets overriding those Sphinx usually puts into the files
 latex_elements = {
     # Sizes
@@ -159,19 +156,9 @@ latex_elements = {
     # Preamble
     'preamble': (
         r'''
-            \usepackage{fontspec}
-            \usepackage{listings}
-            \usepackage{lstfiracode}
+            \usepackage[none]{hyphenat}
             \usepackage[default]{lato}
-
-            \setmonofont{Fira Code}[
-                Contextuals=Alternate
-            ]
-            \lstset{
-                style=FiraCodeStyle,
-                basicstyle=\ttfamily
-            }
-            \ActivateVerbatimLigatures
+            \usepackage{inconsolata}
         '''
     ),
 }
@@ -183,10 +170,10 @@ latex_logo = '_static/site/op_wordmark.png'
 # (source start file, target name, title, author, documentclass)
 latex_documents = [
     (
-        master_doc, 
-        'Omniport.tex', 
+        master_doc,
+        'Omniport.tex',
         documentation,
-        author, 
+        author,
         'manual'
     ),
 ]
