@@ -2,6 +2,10 @@
 
 > The documentation of the one true portal for any and every educational institute
 
+## Status
+
+[![Documentation Status](https://readthedocs.org/projects/omniport/badge/?version=latest)](https://omniport.readthedocs.io/en/latest/?badge=latest)
+
 ## Documentation
 
 Omniport is a portal for educational institutes, designed from the ground up to
