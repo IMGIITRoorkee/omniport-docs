@@ -7,15 +7,21 @@ following non-exhaustive list.
 Code quality
 ------------
 
-- **Idiomatic Python and Django**
+- **Idiomatic Python (Django) and JavaScript (React)**
 
   The entire codebase is written keeping in mind all the philosophies of 
-  Python and Django, class-based views and all.
+  Python and Django, class-based views and all as well as JavaScript and React,
+  class-based components and all.
 
 - **PEP8 compliant**
     
   All the postulates of PEP8 have been satisfied, from the sane rules to the 
   preposterous 80 character limit.
+
+- **StandardJS compliant**
+
+  All the postulates of Standard have been satisfied, from the sane rules to the
+  preposterous no semicolon rule.
 
 - **Completely documented**
     
