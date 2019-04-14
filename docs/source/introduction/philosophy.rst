@@ -8,6 +8,7 @@ After a lot of thinking, some clarity. It had to be poetic. It had to evoke in
 the readers a love that they never thought they could experience again, a love 
 so powerful it would compel them to cheat on their language of preference with 
 Python, to switch to Django from PHP (or even Ruby on Rails, for that matter).
+On the frontend, there never was an real contender to React anyway.
 
 The zen of Omniport
 -------------------
