@@ -9,7 +9,7 @@ the readers a love that they never thought they could experience again, a love
 so powerful it would compel them to cheat on their language of preference with 
 Python, to switch to Django from PHP (or even Ruby on Rails, for that matter).
 
-The Zen of Omniport
+The zen of Omniport
 -------------------
 
 In a fashion similar to Python's, here is a zen poem that somewhat guides the
@@ -31,7 +31,7 @@ decisions behind Omniport.
 Significance
 ------------
 
-The zen of Omniport, in addition to PEP8 and our own code style, is the driving
-force behind our development. Any pull request, even one of the smallest ones, 
-that takes the code towards a state with higher compliance with the above Zen 
-shall be considered worthy of merge.
+The zen of Omniport, in addition to PEP8, StandardJS, and our own code style, is
+the driving force behind our development. Any pull request, even one of the
+smallest ones, that takes the code towards a state with higher compliance with
+the above zen shall be considered worthy of merge.
