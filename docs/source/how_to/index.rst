@@ -25,4 +25,5 @@ comfortable.
    brand_omniport
    create_an_app
    use_oauth2
+   write_logs
    
