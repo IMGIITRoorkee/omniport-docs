@@ -219,3 +219,5 @@ Automate all of this
   :doc:`backend <../references/scripts/backend/create_app>`
   and the
   :doc:`frontend <../references/scripts/frontend/create_app>`.
+
+  Profit.

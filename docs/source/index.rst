@@ -13,7 +13,7 @@ be extensible, customizable, performant and powerful.
   The very classy Omniport wordmark, designed by `Kunal Satpal <https://kunalsatpal.com/>`_
 
 Omniport also comes with a powerful collection of apps and is simple enough for 
-you to be able to write your own.
+you to be able to write your own. It's legit magic. Pure, unadulterated magic.
 
 This documentation walks you through the Omniport project. It explains its 
 philosophy and its features. It explains the technologies involved in the 
