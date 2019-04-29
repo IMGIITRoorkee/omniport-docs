@@ -64,8 +64,15 @@ the event of a security breach. Basically user namespaces map ``root`` in the
 Docker sandbox to another UID on the host, thereby stripping away all rights of
 the root user in a container to cause damage to the host.
 
-Then elevate your privileges, open the file ``/etc/docker/daemon.json`` and 
-type in the following lines.
+.. warning::
+
+  While user namespaces are very cool and good, we at IMG have run into a number 
+  of intermittent and irregularly occurring issues when running Omniport under a 
+  namespace. This step is therefore advised only for people who know what they
+  are doing.
+
+To enable namespaces, elevate your privileges, open the file 
+``/etc/docker/daemon.json`` and type in the following lines.
 
 .. code-block:: json
 
