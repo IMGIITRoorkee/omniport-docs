@@ -19,13 +19,12 @@ To enter the container for any service, execute this command.
 
 .. code-block:: console
 
-  [apps omniport-docker]$ docker-compose exec <service_name> sh
+  [apps omniport-docker]$ docker-compose exec <service_name> bash
 
 .. note::
 
-  Some services, namely those built off of Debian, have ``bash`` installed. Most
-  don't. So the best way to go about it is to execute ``sh`` and once in the 
-  container, execute ``bash``.
+  Most Omniport services are built off of Debian and have ``bash`` installed. In
+  case, you face trouble, try running ``sh`` instead.
 
 Go as a developer and migrate the services.
 
