@@ -32,3 +32,6 @@ The ``web_server_logs`` directory further contains three directories.
 All these directories contains various logs that can be examined. The container
 also supports the ``tail`` binary fortunately enabling you to tail and detect
 errors.
+
+For explanations regarding the directory and file structure, refer to the 
+:doc:`guide on how to read logs<../../../../how_to/read_logs>`.
