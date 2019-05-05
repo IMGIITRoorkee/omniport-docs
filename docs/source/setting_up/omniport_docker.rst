@@ -80,16 +80,27 @@ your
 
 in the directory ``cert/``.
 
+Also, if you choose the SSL route, remember to answer 'yes' for HTTPS in the 
+NGINX image build script.
+
 Build the Dockerfiles
 ---------------------
 
-There are three images to be built which, thanks to Omniport's liberal use of 
-scripts, translates to executing three shell commands.
+There are quite a few images to be built which, thanks to Omniport's liberal use
+of scripts, translates to executing just as many shell commands. All these
+scripts are interactive, which means you will be asked questions, whose answers
+will determine the end result of the operation.
+
+Maybe one day we will write a script that runs these scripts.
 
 .. code-block:: console
 
   [apps omniport-docker]$ ./scripts/build/django.sh
   [apps omniport-docker]$ ./scripts/build/react.sh
   [apps omniport-docker]$ ./scripts/build/nginx.sh
+  [apps omniport-docker]$ ./scripts/build/memcached.sh
+  [apps omniport-docker]$ ./scripts/build/rabbitmq.sh
+  [apps omniport-docker]$ ./scripts/build/postgres.sh
+  [apps omniport-docker]$ ./scripts/build/redis.sh
   
 That's all. Omniport Docker is ready to roll.
