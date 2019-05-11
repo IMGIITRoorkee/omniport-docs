@@ -8,6 +8,8 @@ involved in the project.
   :caption: Subsections:
   :maxdepth: 2
 
+  postgres
+  rabbitmq
   nginx
   django
   react
