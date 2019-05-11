@@ -27,4 +27,7 @@ comfortable.
    use_oauth2
    write_logs
    read_logs
+   examine_database
+   access_app_registry
+   monitor_health
    
