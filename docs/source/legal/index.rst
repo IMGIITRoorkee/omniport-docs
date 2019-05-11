@@ -12,6 +12,7 @@ is open-source.
 .. toctree::
   :maxdepth: 2
 
+  privacy_policy
   developer_terms_of_use
   brand_usage_guide/index
   open_source
