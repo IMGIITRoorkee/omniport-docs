@@ -52,7 +52,7 @@ Then from ``omniport-frontend/``, start your development server.
 
 .. code-block:: console
 
-  [dev1 omniport-backend]$ ./scripts/start/react.sh -d <django_port>
+  [dev1 omniport-frontend]$ ./scripts/start/react.sh -d <django_port>
 
 Visit these ports from your browser and you should be able to see your app.
 Changing code in either codebase will automatically reload the servers.
