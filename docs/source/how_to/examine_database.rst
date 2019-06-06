@@ -11,7 +11,7 @@ queries to your heart's content.
 
 .. code-block:: console
 
-  [apps omniport-docker]$ dc exec database psql -U <user> -d <db>
+  [apps omniport-docker]$ docker-compose exec database psql -U <user> -d <db>
   
 Here <db> and <user> must be replaced with the values of POSTGRES_DB and
 POSTGRES_USER respectively, as written in the file ``postgres/database.env``.
