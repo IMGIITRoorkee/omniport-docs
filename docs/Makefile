@@ -7,9 +7,15 @@ SPHINXBUILD   = sphinx-build
 SOURCEDIR     = source
 BUILDDIR      = build
 
+SPHINXDEV     = sphinx-autobuild
+PORT          = 8000
+
 # Put it first so that "make" without argument is like "make help".
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+dev:
+	@$(SPHINXDEV) "$(SOURCEDIR)" "$(BUILDDIR)" -p "$(PORT)" 
 
 .PHONY: help Makefile
 
