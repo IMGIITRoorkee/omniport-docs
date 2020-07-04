@@ -20,6 +20,10 @@ your own.
 
 _This here, is only the documentation of the project, not the project iself._
 
+## Setup
+
+Refer to the [setup](SETUP.md).
+
 ## Contribution guidelines
 
 - Fork the repository to your account.
