@@ -2,7 +2,7 @@
 
 #### Prerequisites
 
-- `Python 3.7`
+- `Python 3.8`
 - `pipenv` (Install by running `$ pip install pipenv`)
 
 #### Instructions
@@ -15,7 +15,7 @@
    the dependencies from upgrading themselves.
 
 2. Start the `pipenv` virtual environment via running the following command. Or
-   you can prefix the commands for starting the server or building using
+   you can prefix the commands for starting the server or for building using
    `pipenv run`.
    ```sh
    $ pipenv shell
@@ -24,8 +24,9 @@
 3. To start the development server, run the following commands inside `/docs`.
    This will automatically re-build your changes as you make them.
    ```sh
-   $ sphinx-autobuild source build -p <port number (default 8000)>
+   $ make dev
    ```
+   Pass extra flags like port (default: 8000) using `SPHINXDEVOPTS="-p 8080"`
 
 4. Build the documentation into HTML pages by running the following command
    inside `/docs`.
