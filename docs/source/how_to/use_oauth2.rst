@@ -11,7 +11,7 @@ Register your app for Omniport OAuth2 by visiting the developer portal on
 ``/developer/add``. Here you will be asked a few details about your app. You
 have to
 
-- add your app name, redirect URLs in correct format. 
+- add your app name, redirect URIs in correct format. 
 - describe your app in strictly 127 - 511 words. 
 - select the minimum number of scopes (user information) that you will require 
   for your app. 
@@ -21,7 +21,7 @@ have to
 
 Click on Add button to proceed. You will be taken to app administration 
 dashboard. Here you can edit a few things about your app, like branding, team
-members and redirect URLs.
+members and redirect URIs.
 
 Note down your **client ID** and **client secret key** from the dashboard.
 
@@ -46,13 +46,13 @@ request with the following parameters.
 Parameter                  Description
 ========================= =====================================================================
 **client_id** (required)   The client ID you obtained from the dashboard
-**redirect_uri**           One of the redirect URLs you have registered on the dashboard
-**state**                  Any string that you want the ``REDIRECT_URL`` to receive on success
+**redirect_uri**           One of the redirect URIs you have registered on the dashboard
+**state**                  Any string that you want the ``REDIRECT_URI`` to receive on success
 ========================= =====================================================================
 
 .. warning::
 
-  If the ``redirect_uri`` does not match any of the listed redirect URLs, the 
+  If the ``redirect_uri`` does not match any of the listed redirect URIs, the 
   authorisation request will fail and the user will not see an authorisation 
   screen.
 
@@ -67,7 +67,7 @@ A sample authorisation request URL could therefore look like the one below.
 ::
   
   /oauth/authorise/?client_id=MY_CLIENT_ID
-    <&redirect_uri=REDIRECT_URL>
+    <&redirect_uri=REDIRECT_URI>
     <&state=RANDOM_STATE_STRING>
 
 The user experience
@@ -85,19 +85,19 @@ they see it).
 Neither you or your application can or need to do anything here; Omniport
 deals with the user, receiving the user's intent to approve or disapprove your 
 app. Based on whether the user approves the app or denies it, the user will be 
-redirected to ``REDIRECT_URL`` or back to Omniport home.
+redirected to ``REDIRECT_URI`` or back to Omniport home.
 
 Handling the Response from Omniport OAuth2
 ------------------------------------------
 
 If the user clicks approves the app to access their data on the previous screen, 
-OAuth2 will redirect the user to the ``REDIRECT_URL`` specified earlier with a code 
+OAuth2 will redirect the user to the ``REDIRECT_URI`` specified earlier with a code 
 parameter, any state passed to the authorisation URL will be forwarded to 
-``REDIRECT_URL``.
+``REDIRECT_URI``.
 
 ::
   
-  REDIRECT_URL?code=AUTHORISATION_CODE
+  REDIRECT_URI?code=AUTHORISATION_CODE
     <&state=RANDOM_STATE_STRING>
 
 This one-time authorisation code has a TTL of 1 minute. So the next step, which
@@ -119,8 +119,8 @@ Parameter                      Description
 **client_id** (required)       The client ID you obtained from the dashboard
 **client_secret** (required)   The client secret you obtained from the dashboard
 **grant_type** (required)      ``authorization_code`` as it is
-**redirect_uri** (required)    One of the redirect URLs you have registered on the dashboard
-**code** (required)            The authorisation code sent to the REDIRECT_URL
+**redirect_uri** (required)    One of the redirect URIs you have registered on the dashboard
+**code** (required)            The authorisation code sent to the REDIRECT_URI
 ============================= ===============================================================
 
 If everything goes right and the request is successful, you’ll receive a 200
