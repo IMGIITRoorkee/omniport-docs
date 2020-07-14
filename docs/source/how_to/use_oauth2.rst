@@ -46,13 +46,13 @@ request with the following parameters.
 Parameter                  Description
 ========================= =====================================================================
 **client_id** (required)   The client ID you obtained from the dashboard
-**redirect_url**           One of the redirect URLs you have registered on the dashboard
+**redirect_uri**           One of the redirect URLs you have registered on the dashboard
 **state**                  Any string that you want the ``REDIRECT_URL`` to receive on success
 ========================= =====================================================================
 
 .. warning::
 
-  If the ``redirect_url`` does not match any of the listed redirect URLs, the 
+  If the ``redirect_uri`` does not match any of the listed redirect URLs, the 
   authorisation request will fail and the user will not see an authorisation 
   screen.
 
@@ -67,7 +67,7 @@ A sample authorisation request URL could therefore look like the one below.
 ::
   
   /oauth/authorise/?client_id=MY_CLIENT_ID
-    <&redirect_url=REDIRECT_URL>
+    <&redirect_uri=REDIRECT_URL>
     <&state=RANDOM_STATE_STRING>
 
 The user experience
@@ -119,7 +119,7 @@ Parameter                      Description
 **client_id** (required)       The client ID you obtained from the dashboard
 **client_secret** (required)   The client secret you obtained from the dashboard
 **grant_type** (required)      ``authorization_code`` as it is
-**redirect_url** (required)    One of the redirect URLs you have registered on the dashboard
+**redirect_uri** (required)    One of the redirect URLs you have registered on the dashboard
 **code** (required)            The authorisation code sent to the REDIRECT_URL
 ============================= ===============================================================
 
