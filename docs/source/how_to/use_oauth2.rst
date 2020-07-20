@@ -167,27 +167,27 @@ of the client app, similar to this:
 
     {
        "userId": 1234,
-       "username": "19114099",
-       "person":{
-          "shortName":"dhruvkb",
-          "fullName":"Dhruv Kanti Bhanushali",
-          "roles":[
+       "username": "15xxx009",
+       "person": {
+          "shortName": "dhruvkb",
+          "fullName": "Dhruv Kanti Bhanushali",
+          "roles": [
              {
-                "role":"Student",
-                "activeStatus":"ActiveStatus.IS_ACTIVE"
+                "role": "Student",
+                "activeStatus": "ActiveStatus.IS_ACTIVE"
              },
              {
-                "role":"Maintainer",
-                "activeStatus":"ActiveStatus.IS_ACTIVE"
+                "role": "Maintainer",
+                "activeStatus": "ActiveStatus.IS_ACTIVE"
              }
           ],
           ...
        },
-       "student":{
-            "enrolmentNumber": "19114099",
+       "student": {
+            "enrolmentNumber": "15xxx009",
              ...
        },
-       "contactInformation":{
+       "contactInformation": {
             "instituteWebmailAddress": "xyz@iitr.ac.in"
              ...
        }
