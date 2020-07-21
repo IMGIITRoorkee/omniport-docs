@@ -147,9 +147,61 @@ However, if the response is not successful, you’ll receive an error response.
 Using the access token
 ----------------------
 
-.. note::
+Now that you have the access token, you can get the user data by sending a
+``GET`` request to ``/open_auth/get_user_data/`` with the access token in the
+header as follows:
 
-  This part of the process is still under development. So check back later.
+.. code-block:: json
+
+  {
+    "Authorization": "Bearer vqygrcouTuyAYHZLz3rGcZf5FpPd3K"
+  }
+
+where ``vqygrcouTuyAYHZLz3rGcZf5FpPd3K`` is the access token.
+
+If the access token is valid, then you will receive a 200 response
+with a dictionary containing the user's information based on the scopes
+of the client app, similar to this:
+
+.. code-block:: json
+
+    {
+       "userId": 1234,
+       "username": "15xxx009",
+       "person": {
+          "shortName": "dhruvkb",
+          "fullName": "Dhruv Kanti Bhanushali",
+          "roles": [
+             {
+                "role": "Student",
+                "activeStatus": "ActiveStatus.IS_ACTIVE"
+             },
+             {
+                "role": "Maintainer",
+                "activeStatus": "ActiveStatus.IS_ACTIVE"
+             }
+          ],
+          ...
+       },
+       "student": {
+            "enrolmentNumber": "15xxx009",
+             ...
+       },
+       "contactInformation": {
+            "instituteWebmailAddress": "xyz@iitr.ac.in"
+             ...
+       }
+    }
+
+However, if the access token is invalid, you will receive the following ``401 Unauthorized`` error response.
+
+.. code-block::
+
+    {
+        "detail": "Authentication credentials were not provided."
+    }
+
+
 
 Future plans
 ------------
