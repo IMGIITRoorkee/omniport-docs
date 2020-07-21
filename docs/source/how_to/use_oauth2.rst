@@ -193,11 +193,13 @@ of the client app, similar to this:
        }
     }
 
-However, if the access token is invalid, you will receive the following 404 error response.
+However, if the access token is invalid, you will receive the following ``401 Unauthorized`` error response.
 
 .. code-block::
 
-      "Associated application not found"
+    {
+        "detail": "Authentication credentials were not provided."
+    }
 
 
 
