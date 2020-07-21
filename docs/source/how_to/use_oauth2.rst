@@ -193,7 +193,7 @@ of the client app, similar to this:
        }
     }
 
-However, if the access token is invalid, you will receive the following error response.
+However, if the access token is invalid, you will receive the following 404 error response.
 
 .. code-block::
 
