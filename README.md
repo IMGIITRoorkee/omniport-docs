@@ -20,6 +20,11 @@ your own.
 
 _This here, is only the documentation of the project, not the project iself._
 
+## Setup
+
+Refer to the
+[setup instructions](https://omniport.readthedocs.io/en/latest/setting_up/omniport_docs.html).
+
 ## Contribution guidelines
 
 - Fork the repository to your account.
