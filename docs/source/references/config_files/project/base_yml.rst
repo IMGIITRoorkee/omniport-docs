@@ -163,6 +163,30 @@ these settings have to be their default values as shown in the
         | The port on which the service can be reached
         | ``integer``
 
+  :communicationStore:
+    | Attributes pertaining to Redis container storing communications
+    | ``{object}`` which has the following subkeys
+
+      :host:
+        | The IP/name of the host machine or container running this service
+        | ``string``
+
+      :port:
+        | The port on which the service can be reached
+        | ``integer``
+
+  :verificationStore:
+    | Attributes pertaining to Redis container storing verifications
+    | ``{object}`` which has the following subkeys
+
+      :host:
+        | The IP/name of the host machine or container running this service
+        | ``string``
+
+      :port:
+        | The port on which the service can be reached
+        | ``integer``
+
   :notificationStore:
     | Attributes pertaining to Redis container storing notifications
     | ``{object}`` which has the following subkeys
@@ -187,6 +211,46 @@ these settings have to be their default values as shown in the
         | The port on which the service can be reached
         | ``integer``
     
+Integrations
+++++++++++++++++
+
+Useful applications that can connect to Django, like `Sentry
+<https://sentry.io/welcome/>`_, can be integrated into the project.
+
+Emails
+++++++++++++++++
+
+The emails part of the config file is used to define settings for sending
+emails from your project.
+
+:emails:
+  | Email configurations for your project
+  | ``{object}`` which has the following subkeys
+
+    :emailBackend:
+      | The backend used for sending emails
+      | ``string``
+
+    :emailHost:
+      | The email service provider used
+      | ``string``
+
+    :emailUseTls:
+      | Whether an email uses a TLS connection or not
+      | ``boolean``
+
+    :emailPort:
+      | The port used by smtp server
+      | ``integer``
+
+    :emailHostUser:
+      | The email address from which all emails will be sent
+      | ``string``
+
+    :emailHostPassword:
+      | The password of the host's email account
+      | ``string``
+
 IP address rings
 ++++++++++++++++
 
@@ -201,7 +265,6 @@ highest priority in terms of privilege to access certain APIs and resources.
 These rings are described here, in the ``ipAddressRings`` key.
 
 :ipAddressRings:
-  | Hello
   | ``[{object}]`` each of which has the following subkeys 
 
   :name:
@@ -247,6 +310,12 @@ this.
     sessionStore:
       host: session-store
       port: 6379
+    communicationStore:
+      host: communication-store
+      port: 6379
+    verificationStore:
+      host: verification-store
+      port: 6379
     notificationStore:
       host: notification-store
       port: 6379
@@ -258,6 +327,13 @@ this.
       port: 5672
       user: omniport_user
       password: omniport_password
+  emails:
+    emailBackend: 'django.core.mail.backends.smtp.EmailBackend'
+    emailHost: 'smtp.example.com'
+    emailUseTls: True
+    emailPort: 587
+    emailHostUser: 'no-reply@omniport.com'
+    emailHostPassword: 'img@password'
   ipAddressRings:
   - name: self
     patterns:
