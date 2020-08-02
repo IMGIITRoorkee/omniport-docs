@@ -105,7 +105,7 @@ these settings have to be their default values as shown in the
 
       :port:
         | The port on which the service can be reached
-        | ``string``
+        | ``integer``
 
       :user:
         | The username that can be used to log in to the service
@@ -129,7 +129,7 @@ these settings have to be their default values as shown in the
 
       :port:
         | The port on which the service can be reached
-        | ``string``
+        | ``integer``
 
       :user:
         | The username that can be used to log in to the service
@@ -149,7 +149,7 @@ these settings have to be their default values as shown in the
 
       :port:
         | The port on which the service can be reached
-        | ``string``
+        | ``integer``
 
   :sessionStore:
     | Attributes pertaining to Redis container storing sessions
@@ -161,7 +161,7 @@ these settings have to be their default values as shown in the
 
       :port:
         | The port on which the service can be reached
-        | ``string``
+        | ``integer``
 
   :notificationStore:
     | Attributes pertaining to Redis container storing notifications
@@ -173,7 +173,7 @@ these settings have to be their default values as shown in the
 
       :port:
         | The port on which the service can be reached
-        | ``string``
+        | ``integer``
 
   :cache:
     | Attributes pertaining to the Memcached cache
@@ -185,7 +185,7 @@ these settings have to be their default values as shown in the
 
       :port:
         | The port on which the service can be reached
-        | ``string``
+        | ``integer``
     
 IP address rings
 ++++++++++++++++
