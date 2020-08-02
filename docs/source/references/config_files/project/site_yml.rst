@@ -99,8 +99,10 @@ like this.
     ipAddressRings:
     - self
     - specifics
+    - administrators
     - maintainers
     - intranet
+    - internet
 
 A site-level configuration for a typical production site, more specifically the
 Intranet site ``site_1.yml`` looks like this.
