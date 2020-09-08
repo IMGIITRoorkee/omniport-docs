@@ -217,6 +217,11 @@ Integrations
 Useful applications that can connect to Django, like `Sentry
 <https://sentry.io/welcome/>`_, can be integrated into the project.
 
+:integrations:
+  | Integrations for your project
+  | ``{object}`` which can have different integration's configurations as
+    subkeys
+
 Emails
 ++++++++++++++++
 
@@ -240,7 +245,7 @@ emails from your project.
       | ``boolean``
 
     :emailPort:
-      | The port used by smtp server
+      | The port used by SMTP server
       | ``integer``
 
     :emailHostUser:
@@ -334,6 +339,7 @@ this.
     emailPort: 587
     emailHostUser: 'no-reply@omniport.com'
     emailHostPassword: 'img@password'
+  integrations: {}
   ipAddressRings:
   - name: self
     patterns:
