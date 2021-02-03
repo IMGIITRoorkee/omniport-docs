@@ -16,6 +16,8 @@ release and Omniport is always a rolling distribution.
 +                       +-----------------------+-----------------------+
 |                       | *Channels*            |  Redis                |
 +                       +-----------------------+-----------------------+
+|                       | *Temporary app*       |  Redis                |
++                       +-----------------------+-----------------------+
 |                       | *GUI*                 |  Redis Commander      |
 +-----------------------+-----------------------+-----------------------+
 | **SQL database**      | *Application*         |  PostgreSQL           |
@@ -53,6 +55,7 @@ release and Omniport is always a rolling distribution.
   - Channel layer
   - Session store
   - Notification store
+  - Application store
   - Database
   - Cache
 

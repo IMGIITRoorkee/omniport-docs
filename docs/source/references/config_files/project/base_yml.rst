@@ -199,6 +199,19 @@ these settings have to be their default values as shown in the
         | The port on which the service can be reached
         | ``integer``
 
+  :applicationStore:
+    | Attributes pertaining to Redis container storing data for omniport
+    | applications which are temporary in nature
+    | ``{object}`` which has the following subkeys
+
+      :host:
+        | The IP/name of the host machine or container running this service
+        | ``string``
+
+      :port:
+        | The port on which the service can be reached
+        | ``string``
+
   :cache:
     | Attributes pertaining to the Memcached cache
     | ``{object}`` which has the following subkeys
@@ -318,6 +331,9 @@ this.
       port: 6379
     notificationStore:
       host: notification-store
+      port: 6379
+    applicationStore:
+      host: application-store
       port: 6379
     cache:
       host: cache
