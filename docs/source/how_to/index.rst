@@ -31,4 +31,4 @@ comfortable.
    examine_database
    access_app_registry
    monitor_health
-   
+   make_public_view
