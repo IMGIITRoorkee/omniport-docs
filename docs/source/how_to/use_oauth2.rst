@@ -201,7 +201,60 @@ However, if the access token is invalid, you will receive the following ``401 Un
         "detail": "Authentication credentials were not provided."
     }
 
+Generating new access token using refresh token
+------------------------------------
 
+The access token has a short lifetime of **36000 seconds**. If it expires, you'll need to generate new 
+tokens either by re-authenticating the user or using the refresh token.
+
+To generate these new tokens, you’ll need to make a ``POST`` request to 
+``/open_auth/token/`` with the following parameters:
+
+============================= ===============================================================
+Parameter                      Description
+============================= ===============================================================
+**client_id** (required)       The client ID you obtained from the dashboard
+**client_secret** (required)   The client secret you obtained from the dashboard
+**grant_type** (required)      ``refresh_token`` as it is
+**refresh_token** (required)   The refresh token received in exchange of authorization code.
+============================= ===============================================================
+
+The newly created tokens were successfully generated if you get a 200 response. The "JSON" response body will appear as follows:
+
+.. code-block:: json
+
+  {
+    "access_token": "cjlgnpwhfuyAYHZLz3rGcZf5FpPd3K",
+    "expires_in": 36000,
+    "token_type": "Bearer",
+    "scope": "read write",
+    "refresh_token": "NhdwsFL1Ks5LkXDe9ZFUIFvIzXKt9M"
+  }
+
+You will get an error response, though, if the response is unsuccessful.
+
+.. code-block:: json
+
+  {
+    "error": "some_error_message"
+  }
+
+Logging out the user
+------------------------------------
+
+You can revoke the tokens to bar access when the user logs out.
+
+To revoke the access and refresh token,  you’ll need to make a ``POST`` request to ``/open_auth/revoke_token/`` 
+with the following parameters:
+
+============================== ===============================================================
+Parameter                      Description
+============================== ===============================================================
+**client_id** (required)       The client ID you obtained from the dashboard
+**client_secret** (required)   The client secret you obtained from the dashboard
+**token** (required)           The access/refresh token you wish to revoke
+**token_type_hint** (required) ``access_token`` or ``refresh_token``
+============================== ===============================================================
 
 Future plans
 ------------
