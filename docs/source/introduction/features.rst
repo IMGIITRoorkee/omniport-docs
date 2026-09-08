@@ -38,8 +38,9 @@ Cutting-edge
 
 - **Cutting-edge technology**
 
-  Hope the devs are OK with bleeding because Omniport rolls with the latest 
-  in technology as evident from the stack.
+  Nothing in the stack is carried for backwards compatibility's sake.
+  Versions are pinned rather than chased, so the bleeding is at least
+  scheduled.
 
 - **Containers**
 
