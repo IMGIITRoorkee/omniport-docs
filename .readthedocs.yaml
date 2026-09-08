@@ -1,0 +1,15 @@
+version: 2
+
+# Python 3.8, because the pinned Sphinx and Jinja2 releases predate the
+# removals that make them uninstallable on anything newer
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "3.8"
+
+sphinx:
+  configuration: docs/source/conf.py
+
+python:
+  install:
+    - requirements: requirements.txt
