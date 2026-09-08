@@ -1,0 +1,26 @@
+name: Documentation
+
+on:
+  pull_request:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: pip
+
+    - run: pip install -r requirements.txt
+
+    # Warnings are errors. A malformed table and a heading underline shorter
+    # than its heading are both warnings, and both have reached the live site.
+    - run: make html SPHINXOPTS="-W --keep-going -n"
+      working-directory: docs
