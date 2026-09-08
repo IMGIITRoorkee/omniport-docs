@@ -190,18 +190,19 @@ of the client app, similar to this:
                 "role": "Maintainer",
                 "activeStatus": "ActiveStatus.IS_ACTIVE"
              }
-          ],
-          ...
+          ]
        },
        "student": {
-            "enrolmentNumber": "15xxx009",
-             ...
+            "enrolmentNumber": "15xxx009"
        },
        "contactInformation": {
             "instituteWebmailAddress": "xyz@iitr.ac.in"
-             ...
        }
     }
+
+Each object carries more fields than are shown here, and which of them you
+receive depends on the scopes your application holds. Read the fields you need
+by name and ignore the rest, rather than assuming the shape above is complete.
 
 However, if the access token is missing, expired or revoked, you will receive
 a ``401 Unauthorized`` response.
