@@ -2,10 +2,10 @@
 =====================
 
 Before you can make any use of Omniport, you'll need to migrate the database.
-This can be accomplished with the usual ``migrate`` command. from inside the
+This can be accomplished with the usual ``migrate`` command from inside the
 intranet or Internet server container.
 
-.. code-block:: python
+.. code-block:: console
 
   [apps omniport-docker]$ docker-compose exec intranet-server bash
   docker@intranet-server:/omniport$ python manage.py migrate <app_name>
@@ -23,14 +23,28 @@ models makes that a little complicated.
 You will need to migrate apps individually and in a strictly defined order. This
 is as follows.
 
-#. kernel (will automatically migrate contenttypes, auth, base_auth and shell)
+#. kernel, which brings ``contenttypes``, ``auth``, ``base_auth`` and, if you
+   have installed one, ``shell`` along with it
+#. base_auth
+#. shell, if you have installed one
+#. formula_one
 #. auth
 #. session_auth
+#. token_auth
 #. sessions
 #. open_auth
 #. oauth2_provider
 #. admin
 #. guardian
+#. django_celery_results
+
+.. note::
+
+  ``kernel`` depends on the *first* migration of ``base_auth`` and of ``shell``,
+  not on every migration either of them ships. Migrating ``kernel`` therefore
+  leaves both only partly applied, which is why they appear in the list in
+  their own right. ``formula_one`` and ``token_auth`` are depended upon by
+  nothing at all, so they are only ever migrated by being named.
 
 After the above have been migrated, you have a fully functional Omniport core.
 But that is not all, you'll also have to migrate the following before the 
@@ -46,4 +60,32 @@ has been migrated and what is left to be migrated.
 
   docker@intranet-server:/omniport$ python manage.py showmigrations
 
-That's it. Now you have a fully migrated database and are ready to populate it.
+Once ``showmigrations`` reports nothing left unapplied, the database is ready.
+
+After migrating
+---------------
+
+A migrated database is not yet a working portal. Two further commands have to
+be run in the same container, and neither of them runs for you at startup.
+
+.. code-block:: console
+
+  docker@intranet-server:/omniport$ python manage.py collectstatic
+  docker@intranet-server:/omniport$ python manage.py collectdaemon
+
+``collectstatic`` gathers the static files of every discovered service and app
+into the volume that the reverse proxy serves.
+Without it the portal loads, but every stylesheet, script and image below
+``/static/`` answers with a 404, which includes the Django admin and the
+browsable API.
+
+``collectdaemon`` symlinks the Supervisor configuration that services and apps
+ship into the directory Supervisor reads when it starts.
+Without it no background worker is ever started, the Celery worker included, so
+tasks queue up and never run.
+
+.. note::
+
+  Run both again whenever you add a service or an app, and restart the server
+  containers after ``collectdaemon`` so that Supervisor reads the new
+  configuration.
