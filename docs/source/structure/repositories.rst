@@ -3,7 +3,7 @@ Repositories
 
 Omniport is not a single repository. The entire project is made up
 of dozens of distinct, yet interconnected parts, most of which have their own
-repositories under the `IMGIITRoorkee <https://github.com/IMGIITRoorkeee>`_   
+repositories under the `IMGIITRoorkee <https://github.com/IMGIITRoorkee>`_   
 GitHub organisation page. This means that cloning the Omniport project is not 
 one operation but many.
 
@@ -70,6 +70,17 @@ reflected here with very little to almost no effort.
 .. image:: https://img.shields.io/github/last-commit/IMGIITRoorkee/omniport-frontend.svg?style=flat-square&logo=react&logoColor=white
   :target: https://github.com/IMGIITRoorkee/omniport-frontend/
 
+Formula 1
++++++++++
+
+Formula 1 is the library of shared components and functions that the apps and the services build upon.
+It has one repository per side of the codebase, ``omniport-backend-formula-one`` and ``omniport-frontend-formula-one``, and each is cloned into a ``formula_one/`` directory inside the respective source tree rather than installed as a package.
+
+.. seealso::
+
+  The offerings of Formula 1 are documented
+  :doc:`here <../references/formula_one/index>`.
+
 Shell
 -----
 
@@ -106,6 +117,12 @@ software.
   upgradation of any random shells made by any random developers for any random
   institutes of any random country.
 
+Documentation
+-------------
+
+The documentation you are reading right now has a repository of its own, ``omniport-docs``.
+It is written in reStructuredText, built with Sphinx and published to Read the Docs, which means a correction to these pages is a pull request like any other.
+
 Sub-components
 --------------
 
@@ -118,6 +135,8 @@ repository. They follow a naming convention as follows.
 - ``omniport-service-<service>`` and ``omniport-frontend-<service>``
 - ``omniport-app-<app>`` and ``omniport-frontend-<app>``
 
-Totalled, these repositories number in the fifties. But since these are on an
-open architecture, there is total democracy and freedom regarding who can create
-apps and what those apps can provide. This number has no upper limit.
+A few repositories predate the convention and keep their older names, ``omniport-django-filemanager`` among them, which is cloned in as a service all the same.
+
+Totalled, these sub-component repositories number over a hundred.
+But since these are on an open architecture, there is total democracy and freedom regarding who can create apps and what those apps can provide.
+This number has no upper limit.

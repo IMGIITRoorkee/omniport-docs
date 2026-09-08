@@ -13,20 +13,20 @@ Code quality
   Python and Django, class-based views and all as well as JavaScript and React,
   class-based components and all.
 
-- **PEP8 compliant**
-    
-  All the postulates of PEP8 have been satisfied, from the sane rules to the 
-  preposterous 80 character limit.
+- **PEP8 by convention**
 
-- **StandardJS compliant**
+  The backend is written to PEP8, from the sane rules to the preposterous 80 character limit.
+  No linter stands guard over this, so read it as the house style you are expected to write in rather than a promise that every line already obeys it.
 
-  All the postulates of Standard have been satisfied, from the sane rules to the
-  preposterous no semicolon rule.
+- **StandardJS by convention**
 
-- **Completely documented**
-    
-  Even the most basic and obvious functions and classes have been documented 
-  amply, as this documentation testifies.
+  The frontend is written to Standard, from the sane rules to the preposterous no semicolon rule.
+  Nothing checks this automatically either, so keeping it true is on whoever opens the next pull request.
+
+- **Thoroughly documented**
+
+  Nearly every class and function carries a docstring, the basic and obvious ones included, and the rest is written up here, as this documentation testifies.
+  Modules are the gap, so do not be startled by a file that opens straight onto its imports.
 
 Cutting-edge
 ------------

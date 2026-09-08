@@ -19,9 +19,10 @@ depend on other services and on the core. A service may not depend on an app.
 Services may depend on other services, which is strongly encouraged because it
 leads to a cohesive system.
 
-All services must be installed for Omniport to function properly. Services 
-cannot be chosen at will. Services do not contain any form of filtering based
-on user roles, corresponding active statuses, or IP addresses.
+Services are the common substrate that everything else assumes is there, so installing all of them is the sane default.
+Nothing in the code enforces it, though: discovery is a scan of the ``services/`` directory, and a service you never cloned is simply never found, without complaint.
+What you cannot do is de-select a service through configuration, because every service that is discovered is allowed unconditionally, bypassing the per-site allow list that apps are put through.
+Services contain no filtering whatsoever, neither on user roles, nor on corresponding active statuses, nor on IP addresses.
 
 Services, and services only, may appear in the Omniport sidebar. The subset of
 services that appear in the sidebar are defined by their ``config.json`` file on
@@ -40,11 +41,11 @@ Services are cloned into ``services/`` directories inside the src directory
 
 Since there is no mix-and-match capability in Omniport services, the process 
 of cloning services has been merged with the cloning of the codebases
-using the ``clone_codebase.sh`` script provided by ``omniport-docker``.
+using the ``clone/everything.sh`` script provided by ``omniport-docker``.
 
 .. seealso::
 
-  More on the ``clone-codebase.sh`` script
+  More on the ``clone/everything.sh`` script
   :doc:`here <../references/scripts/docker/clone/everything>`.
 
 Apps
@@ -60,8 +61,8 @@ can be chosen at will.
 
 All apps can choose their target demographic on the basis of roles and 
 corresponding active statuses. These filters can be configured in the 
-``config.yml`` file on the backend. This leads to every user seeing a set of 
-apps on the backend.
+``config.yml`` file on the backend.
+This yields, for every user, a set of apps that the backend is willing to serve them.
 
 .. seealso:: 
   
@@ -70,7 +71,7 @@ apps on the backend.
 
 .. math::
 
-  A = \{\text{apps allowed to a user based on role, active status and orgin IP address}\}
+  A = \{\text{apps allowed to a user based on role, active status and origin IP address}\}
 
 Then there is a set of apps whose frontend has been installed in the frontend
 architecture. This leads to a second set of apps common to every user. 
@@ -97,3 +98,4 @@ Dependencies
   service ---may depend on--> service
   app     ---may depend on--> core
   app     ---may depend on--> service
+  app     ---may depend on--> app

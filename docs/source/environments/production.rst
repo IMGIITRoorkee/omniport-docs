@@ -18,8 +18,8 @@ The postulates of the production workflow are:
 - **One person, the sysadmin, the boss, the chief, opens an SSH session.**
 
   I wasn't sure if SSHs or SSHes, so I went with *'...opens an SSH session'*.
-  This person must manage an underprivileged user on the server, which still
-  has Docker rights though.
+  This person must manage a dedicated, otherwise unprivileged user on the server that is in the ``docker`` group.
+  Be clear-eyed about that last part: membership of the ``docker`` group is equivalent to root on the host, so this user is underprivileged only on paper.
 
   At IMG, we call this user ``apps``. Again you can name it whatever you damn
   well please, provided you remember this name for future use.
