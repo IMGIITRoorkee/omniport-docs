@@ -42,13 +42,15 @@ Authorising the user
 To authorise your users, redirect them to ``/oauth/authorise`` through a ``GET`` 
 request with the following parameters.
 
-========================= =====================================================================
-Parameter                  Description
-========================= =====================================================================
-**client_id** (required)   The client ID you obtained from the dashboard
-**redirect_uri**           One of the redirect URIs you have registered on the dashboard
-**state**                  Any string that you want the ``REDIRECT_URI`` to receive on success
-========================= =====================================================================
+============================== ================================================================
+Parameter                       Description
+============================== ================================================================
+**client_id** (required)        The client ID you obtained from the dashboard
+**response_type** (required)    ``code`` as it is, this being the only supported flow
+**redirect_uri**                One of the redirect URIs you have registered on the dashboard
+**scope**                       ``read write``, which is what the consent screen submits
+**state**                       Any string you want the ``REDIRECT_URI`` to receive on success
+============================== ================================================================
 
 .. warning::
 
@@ -62,11 +64,19 @@ Parameter                  Description
   `documentation <https://django-oauth-toolkit.readthedocs.io/en/latest/>`_ of
   the Django OAuth Toolkit PyPI package.
 
+.. note::
+
+  ``/oauth`` and ``/open_auth`` are two different things and it is worth
+  keeping them apart. ``/oauth`` is a page in the browser, where the user sees
+  and answers the consent screen. ``/open_auth`` is the API your server calls.
+  You send users to the first and your application talks to the second.
+
 A sample authorisation request URL could therefore look like the one below.
 
 ::
-  
+
   /oauth/authorise/?client_id=MY_CLIENT_ID
+    &response_type=code
     <&redirect_uri=REDIRECT_URI>
     <&state=RANDOM_STATE_STRING>
 
@@ -193,16 +203,27 @@ of the client app, similar to this:
        }
     }
 
-However, if the access token is invalid, you will receive the following ``401 Unauthorized`` error response.
+However, if the access token is missing, expired or revoked, you will receive
+a ``401 Unauthorized`` response.
 
-.. code-block::
+.. code-block:: json
 
     {
         "detail": "Authentication credentials were not provided."
     }
 
+.. code-block:: json
+
+    {
+        "detail": "Invalid token header. No credentials provided."
+    }
+
+The first is returned when no ``Authorization`` header was sent, the second when
+one was sent but the token in it is not valid. Treat both the same way, by
+sending the user through the flow again.
+
 Generating new access token using refresh token
-------------------------------------
+-----------------------------------------------
 
 The access token has a short lifetime of **36000 seconds**. If it expires, you'll need to generate new 
 tokens either by re-authenticating the user or using the refresh token.
@@ -240,7 +261,7 @@ You will get an error response, though, if the response is unsuccessful.
   }
 
 Logging out the user
-------------------------------------
+--------------------
 
 You can revoke the tokens to bar access when the user logs out.
 
@@ -256,12 +277,100 @@ Parameter                      Description
 **token_type_hint** (required) ``access_token`` or ``refresh_token``
 ============================== ===============================================================
 
+Handling errors
+---------------
+
+Every endpoint below ``/open_auth/`` answers with a status code that says what
+your application should do next. Read the code before the body, and never treat
+a failed request as the endpoint being down.
+
+============ ============================= ===============================================
+Status        Meaning                       What to do
+============ ============================= ===============================================
+``400``       The request was rejected      Read ``error`` in the body, see the table below
+``401``       The token is not usable       Send the user through the flow again
+``403``       The application is not        Wait for approval, no request will succeed
+              approved                      until it is granted
+``404``       No such approved application  Check the client ID, and that the app is
+                                            approved
+``429``       Too many requests             Wait, then retry, see rate limits below
+``500``       Omniport failed               Retry once, then report it to us
+============ ============================= ===============================================
+
+A rejected request carries an ``error`` from the OAuth2 specification.
+
+.. code-block:: json
+
+  {
+    "error": "invalid_grant"
+  }
+
+========================== =====================================================
+Error                       Cause
+========================== =====================================================
+``invalid_request``         A required parameter is missing or repeated
+``invalid_client``          The client ID or secret is wrong
+``invalid_grant``           The code has expired, been used already, or was
+                            issued to a different client or redirect URI
+``unsupported_grant_type``  The ``grant_type`` is not one this server supports
+``invalid_scope``           The scope requested exceeds what the application
+                            holds
+========================== =====================================================
+
+.. warning::
+
+  ``invalid_grant`` is the one integrators most often mishandle. Authorisation
+  codes are valid for sixty seconds and may be exchanged exactly once, so a
+  retry that replays the same code always fails. Send the user through the flow
+  again to obtain a fresh code, rather than retrying the exchange.
+
+Rate limits
+-----------
+
+Omniport limits how fast an application may call these endpoints. The limits are
+counted per application, not per user, so how many people use your application
+does not change how much of the limit each of them gets.
+
+======================================= ==================================================
+Limit                                    Applies to
+======================================= ==================================================
+50,000 requests an hour                  Every request to ``/open_auth/``, per application
+100 rejected credentials an hour         Requests that fail with ``invalid_client``,
+                                         counted per application and address
+======================================= ==================================================
+
+When a limit is reached, Omniport answers ``429 Too Many Requests`` with a
+``Retry-After`` header giving the number of seconds until the limit resets.
+
+.. code-block::
+
+  HTTP/1.1 429 Too Many Requests
+  Retry-After: 1800
+
+  {
+    "detail": "Request was throttled. Expected available in 1800 seconds."
+  }
+
+.. warning::
+
+  A ``429`` is not a failure of Omniport, and it is not an invalid request.
+  Applications that present it to users as a generic error leave them with no
+  way to know that signing in again shortly would work. Surface the wait, and
+  retry no sooner than ``Retry-After`` says. Retrying immediately will be
+  refused again and brings the limit no closer to resetting.
+
+.. note::
+
+  If you expect an event that will bring a large number of users to your
+  application at once, tell IMG beforehand. Limits can be raised for a window,
+  and load can be tested against a staging environment first.
+
 Future plans
 ------------
 
-As of now the OAuth2 flow supports only the ``authorisation_code`` grant type
-in the flow. This will eventually be expanded to support most if not all of the
-multitude of flows backed by the OAuth2 specification.
+The flow supports the ``authorization_code`` and ``refresh_token`` grant types.
+This will eventually be expanded to support most if not all of the multitude of
+flows backed by the OAuth2 specification.
 
 Further reading
 ---------------
