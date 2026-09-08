@@ -14,8 +14,10 @@ Very fancy.
 Destination
 -----------
 
-All paths referenced here lie within the ``omniport-backend/`` folder inside
-the ``codebase/`` folder.
+Every path referenced here lies inside the ``branding/`` folder at the root of
+``omniport-backend/``, which is itself inside the ``codebase/`` folder. The
+three folders named below, ``site/``, ``institute/`` and ``maintainers/``, are
+its subfolders.
 
 Instructions
 ------------
@@ -76,17 +78,39 @@ Defaults will be provided for these images.
   and Internet) from the same portal, we allow you to brand them separately by 
   loading indexed files.
 
-  Indexing works by suffixing ``_<side_id>`` to the folder name. So a logo for a 
+  Indexing works by suffixing ``_<site_id>`` to the folder name. So a logo for a 
   site with site ID 2 should be placed in ``site_2/`` for Omniport to recognise it. 
   This is optional and you can skip the indexing portion to use the same asset 
   across your sites. 
   
   Ensure that you brand all your served sites or provide a non-indexed version as 
-  fallback. You may use the provided default Omniport branding for your portal or 
+  fallback. The fallback is to the whole folder and not to individual files: if
+  ``site_2/`` exists, Omniport reads that folder and only that folder, so an
+  asset you leave out of it is simply absent rather than taken from ``site/``. You may use the provided default Omniport branding for your portal or 
   *for reference* when designing your own, if designing your own.
 
   If not redesigning your own icons, be sure to respect the 
   :doc:`Brand usage guide <../legal/brand_usage_guide/index>`.
+
+  Three further images belong in this folder, used when the portal is installed
+  to a home screen as a progressive web app.
+
+  ================== ============ ============= =============
+  File name          Aspect ratio Height in use Formats
+  ================== ============ ============= =============
+  ``logo_192.png``   square       192 px        ``.png`` only
+  ``logo_512.png``   square       512 px        ``.png`` only
+  ``logo_apple.png`` square       192 px        ``.png`` only
+  ================== ============ ============= =============
+
+  .. warning::
+
+    These three are not optional, unlike everything else on this page. Omniport
+    reads all three at startup without checking whether they are there, so a
+    site folder missing any one of them stops the portal from starting rather
+    than falling back. If you index your site folders, put all three in every
+    one of them.
+
 
 Batteries-not-included
 ++++++++++++++++++++++
@@ -103,3 +127,12 @@ No defaults will be provided for these images.
 
   The branding imagery employed by Information Management Group for the Indian 
   Institute of Technology, Roorkee is available *for reference*.
+
+Neither of these two folders is indexed by site. Both are read once, under the
+names given, however many sites you serve.
+
+.. warning::
+
+  Both folders must exist even when you put nothing in them. Omniport lists
+  their contents at startup and does not check first, so deleting either one
+  stops the portal from starting. Leave the empty folder in place.
