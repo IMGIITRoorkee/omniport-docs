@@ -3,19 +3,23 @@ Omniport Docs
 
 .. note::
 
-  You must have ``Python 3.8`` and ``pipenv`` installed before you can set
-  up the documentation locally.
+  You must have ``pipenv`` installed before you can set up the documentation
+  locally. The pinned dependencies are old enough to constrain the interpreter:
+  they install on Python 3.8, which is what the published build uses, and on
+  anything up to 3.11, but not beyond it.
 
 #. Install the project dependencies.
 
     .. code-block:: console
    
-        $ pipenv install --skip-lock
+        $ pipenv install
 
-   Omit the flag ``--skip-lock`` if you want the latest packages. Keep in mind
-   that the project has been tested on the versions of the packages specified
-   in the ``Pipfile.lock`` so its compatibilty with the latest packages might
-   not be assured. 
+   This installs the versions pinned in ``Pipfile.lock``, which are the ones
+   the project has been tested on and the ones the published documentation is
+   built from. Adding ``--skip-lock`` does the opposite, ignoring the lock file
+   and resolving the latest release of each package instead, so compatibility
+   is then not assured. Recent releases of ``pipenv`` have removed that flag
+   altogether.
 
 #. Start the ``pipenv`` virtual environment via running the following command.
    Or you can prefix the commands for starting the server or for building docs
@@ -42,11 +46,24 @@ Omniport Docs
 
        $ make html
 
-   This will create the ``docs/build`` directory. You can preview it using one
-   of Python's module called ``http.server``.
+   This writes the pages into ``docs/build/html``. Serve that directory, not
+   ``docs/build``, with Python's ``http.server`` module to preview them.
+
+    .. code-block:: console
+
+       $ python -m http.server --directory build/html
 
 #. To build the documentation into some other format, refer to ``make help``
    command for all the options available.
+
+Where the published documentation comes from
+--------------------------------------------
+
+Merging to ``master`` publishes the documentation. The build runs from
+``requirements.txt``, which is a second list of the same pinned packages,
+maintained by hand alongside ``Pipfile.lock``. Nothing keeps the two in step,
+so change both together or the published build will differ from the one you
+tested locally.
 
 Cannot start the virtual environment?
 -------------------------------------
