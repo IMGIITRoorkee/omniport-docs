@@ -5,7 +5,7 @@ Preamble
 --------
 
 These Omniport developer terms of use (the "developer terms") are between the
-Information Managment Group ("IMG"), the individual or organisation managing the
+Information Management Group ("IMG"), the individual or organisation managing the
 installation of Omniport in a given institution (the "local instance
 maintainers") and the individual or organisation (the "developer") agreeing to
 these terms.
@@ -81,7 +81,7 @@ platform, the developer must
   and from the platform.
 - promptly report to the maintainer any known or suspected security breach
   involving the platform and provide reasonable assistance to the maintainers to
-  patch the breach. n the event of a security breach, prior to issuing any public
+  patch the breach. In the event of a security breach, prior to issuing any public
   statements or responses to third party inquiries, the developer will work in
   good faith with the maintainers to coordinate a statement or response, unless
   prohibited by law.
@@ -150,7 +150,7 @@ or the validity of, the Omniport marks.
 Developer trademark license
 +++++++++++++++++++++++++++
 
-The developer must grant to the maintainers a non- exclusive, non-transferable
+The developer must grant to the maintainers a non-exclusive, non-transferable
 license to use the app marks and descriptive materials that developer publishes
 about the app or the developer's use of the platform. This license is limited to
 the maintainers promoting their products or services and acknowledging or
@@ -219,10 +219,10 @@ of the platform
   breach within 30 days after receipt of written notice.
 - if IMG is required to do so by the law of the land or by ethical and moral
   principles.
-- if ING ceases to offer any products or services covered by these terms.
+- if IMG ceases to offer any products or services covered by these terms.
 - if IMG determines or has reason to believe the developer or the app may cause
-  harm or loss to the platforn or to any of the platform's users, or the developer
-  or the app is or will be a threat to to the platforn or to any of the platform's
+  harm or loss to the platform or to any of the platform's users, or the developer
+  or the app is or will be a threat to the platform or to any of the platform's
   users.
 - for any other reason with 30 days prior written notice to the developer.
 - in order to assess or address any imminent or potential security threat.
@@ -230,7 +230,7 @@ of the platform
 Termination by the developer
 ++++++++++++++++++++++++++++
 
-The developer may terminate these yerms at any time by ceasing all use of the
+The developer may terminate these terms at any time by ceasing all use of the
 platform (including use by the apps) and by either
 
 - deleting the app if the developer is the sole developer.
@@ -246,7 +246,7 @@ If these terms are terminated
 
 - the rights granted by IMG to the developer will cease immediately.
 - the developer will cease all use, operation, support, promotion, and
-  distribution of the the app and the platform.
+  distribution of the app and the platform.
 - the developer may lose all access to any content, material or information that
   the developer has provided to IMG regarding the app or the platform.
 
@@ -256,7 +256,8 @@ The following terms will survive the termination of the agreement
 - `Prohibited actions`_
 - `Platform usage`_
 - `User data`_
-- `Intellectual property`_ - `Definitions`_
+- `Intellectual property`_
+- `Definitions`_
 
 Warranties
 ----------
@@ -274,7 +275,7 @@ The developer represents and warrants that
 Indemnity
 ---------
 
-The developer will indemnify, defend and hold Dropbox and its affiliates
+The developer will indemnify, defend and hold IMG and its affiliates
 harmless from all costs and expenses arising from any third party claim relating
 to any breach or omission on the developer's part in upholding these terms.
 
@@ -316,7 +317,7 @@ developer agrees to be bound by the revised terms.
 Disputes
 --------
 
-None of the parties on the side on IMG including, but not limited to,
+None of the parties on the side of IMG including, but not limited to,
 affiliates, agents and local instance maintainers will ever indulge a dispute
 unless explicitly expressing an intention to do so which has about the same
 chance as a snowball in hell given that IMG is a student organisation running an
@@ -337,7 +338,7 @@ relationship is deemed to be that of independent contractors.
 
 Notices to IMG are to be sent via email, courier or mail and are deemed given
 when received. Notices to the developer are to be sent via email, courier or
-mail are and deemed given when sent.
+mail and are deemed given when sent.
 
 IMG can be reached at
 
