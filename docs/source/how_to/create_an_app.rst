@@ -1,3 +1,8 @@
+:sourcefiles:
+  omniport-backend/omniport/core/configuration/models/app/app.py
+  omniport-backend/scripts/create/app.sh
+  omniport-frontend/scripts/create/app.sh
+
 ... create an app?
 ==================
 

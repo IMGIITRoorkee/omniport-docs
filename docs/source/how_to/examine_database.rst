@@ -1,3 +1,7 @@
+:sourcefiles:
+  omniport-docker/postgres/database_stencil.env
+  omniport-docker/docker-compose.yml
+
 ... examine database?
 =====================
 

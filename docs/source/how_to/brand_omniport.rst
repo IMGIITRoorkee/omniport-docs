@@ -1,3 +1,7 @@
+:sourcefiles:
+  omniport-backend/branding/README.md
+  omniport-backend/omniport/core/configuration/models/project/imagery.py
+
 ... brand Omniport?
 ===================
 

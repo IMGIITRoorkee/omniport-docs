@@ -1,3 +1,8 @@
+:sourcefiles:
+  omniport-docker/scripts/clone/everything.sh
+  omniport-docker/scripts/build/nginx.sh
+  omniport-backend/configuration/base_stencil.yml
+
 Omniport Docker
 ===============
 
