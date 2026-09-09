@@ -41,7 +41,6 @@ release = ''
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
-    'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
@@ -218,9 +217,6 @@ texinfo_documents = [
 ##############
 # Extensions #
 ##############
-
-# Intersphinx
-intersphinx_mapping = {'https://docs.python.org/': None}
 
 # To-do
 todo_include_todos = True

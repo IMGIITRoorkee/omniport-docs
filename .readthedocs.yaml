@@ -1,11 +1,11 @@
 version: 2
 
-# Python 3.8, because the pinned Sphinx and Jinja2 releases predate the
-# removals that make them uninstallable on anything newer
+# 3.11 is the ceiling: sphinx-autobuild pulls in pathtools, which imports the
+# imp module that 3.12 removed. Sphinx itself installs well past 3.11.
 build:
   os: ubuntu-22.04
   tools:
-    python: "3.8"
+    python: "3.11"
 
 sphinx:
   configuration: docs/source/conf.py
