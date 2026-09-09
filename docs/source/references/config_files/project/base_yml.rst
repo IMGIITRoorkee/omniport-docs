@@ -231,9 +231,17 @@ Useful applications that can connect to Django, like `Sentry
 <https://sentry.io/welcome/>`_, can be integrated into the project.
 
 :integrations:
-  | Integrations for your project
-  | ``{object}`` which can have different integration's configurations as
-    subkeys
+  | Third-party services the project talks to, keyed by name
+  | ``{object}`` holding one entry per integration, and required even when it
+    is empty, because there is no default to fall back on
+
+  :sentry:
+    | Error reporting
+    | ``{object}`` with a single key, ``dsn``
+
+  :slack:
+    | Messages posted by apps, keyed by the name of the app posting them
+    | ``{object}`` of ``{object}``, each with a single key, ``url``
 
 Emails
 ++++++++++++++++
@@ -348,6 +356,7 @@ this.
       port: 5672
       user: omniport_user
       password: omniport_password
+  integrations: {}
   emails:
     emailBackend: 'django.core.mail.backends.smtp.EmailBackend'
     emailHost: 'smtp.example.com'
@@ -355,7 +364,6 @@ this.
     emailPort: 587
     emailHostUser: 'no-reply@omniport.com'
     emailHostPassword: 'img@password'
-  integrations: {}
   ipAddressRings:
   - name: self
     patterns:
