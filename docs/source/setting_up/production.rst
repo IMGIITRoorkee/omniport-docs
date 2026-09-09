@@ -1,3 +1,7 @@
+:sourcefiles:
+  omniport-frontend/scripts/build/frontend.sh
+  omniport-docker/docker-compose.yml
+
 Production
 ==========
 

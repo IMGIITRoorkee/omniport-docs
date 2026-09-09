@@ -1,3 +1,9 @@
+:sourcefiles:
+  omniport-docker/nginx/conf.d/stencils/logging.conf
+  omniport-docker/django/supervisord.conf
+  omniport-docker/django/gunicorn_config.py
+  omniport-backend/omniport/omniport/settings/configuration/logging.py
+
 ... read logs?
 ==============
 

@@ -1,3 +1,7 @@
+:sourcefiles:
+  omniport-backend/omniport/omniport/settings/configuration/logging.py
+  omniport-backend/omniport/core/discovery/discovery.py
+
 ... write logs?
 ===============
 
