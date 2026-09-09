@@ -10,6 +10,8 @@ involved in the project.
 
   postgres
   rabbitmq
+  redis
+  memcached
   nginx
   django
   react
