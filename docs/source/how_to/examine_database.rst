@@ -17,3 +17,20 @@ Here <db> and <user> must be replaced with the values of POSTGRES_DB and
 POSTGRES_USER respectively, as written in the file ``postgres/database.env``.
 
 Here on out, refer to the PostgreSQL documentation for help.
+
+.. warning::
+
+  Omniport swaps several of its core models, so the table a model writes to is
+  not always the one its name suggests. If you have installed a shell, the rows
+  behind ``Person``, ``Student`` and their neighbours live in the shell's
+  tables and the ``kernel`` ones sit unused. Read
+  :doc:`the migration guide <migrate_database>` before you write anything, and
+  prefer ``SELECT`` until you are certain which table is live.
+
+.. warning::
+
+  Omniport ships no backup mechanism. The Compose file declares volumes named
+  ``database_backup``, ``media_files_backup`` and ``personal_files_backup``,
+  but no container mounts them and nothing ever writes to them, so the names
+  promise a safety net that does not exist. Arrange your own ``pg_dump``
+  schedule before you run anything of consequence against a live database.

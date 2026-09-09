@@ -41,13 +41,13 @@ The following is a map of the sources and log files for NGINX.
 +---------------------+---------------------+
 | Source              | Log file            |
 +=====================+=====================+
-| Intranet access log | intranet-access.log |
+| Intranet access log | intranet_access.log |
 +---------------------+---------------------+
-| Intranet error log  | intranet-error.log  |
+| Intranet error log  | intranet_error.log  |
 +---------------------+---------------------+
-| Internet access log | internet-access.log |
+| Internet access log | internet_access.log |
 +---------------------+---------------------+
-| Internet error log  | internet-error.log  |
+| Internet error log  | internet_error.log  |
 +---------------------+---------------------+
 
 Web server logs
@@ -64,17 +64,21 @@ Gunicorn
 
 The following is a map of the sources and log files for Gunicorn. 
 
-+----------------------+----------------+
-| Source               | Log file       |
-+======================+================+
-| Access log           | <x>-access.log |
-+----------------------+----------------+
-| Error log            | <x>-error.log  |
-+----------------------+----------------+
-| Django log           | <x>-django.log |
-+----------------------+----------------+
-| Service and app logs | <x>-<name>.log |
-+----------------------+----------------+
++----------------------+----------------------------+
+| Source               | Log file                   |
++======================+============================+
+| Access log           | <x>-access.log             |
++----------------------+----------------------------+
+| Error log            | <x>-error.log              |
++----------------------+----------------------------+
+| Django log           | <x>-django.log             |
++----------------------+----------------------------+
+| Omniport core log    | <x>-core.log               |
++----------------------+----------------------------+
+| Permission denials   | <x>-kernel_permissions.log |
++----------------------+----------------------------+
+| Service and app logs | <x>-<name>.log             |
++----------------------+----------------------------+
 
 Here <x> must be replaced with **1** or **2** based on the site IDs. For more 
 information on site IDs, refer to the :doc:`site-level configuration docs
@@ -99,9 +103,45 @@ well-documented itself.
 | Access log           | <x>-access.log |
 +----------------------+----------------+
 
+Every file listed under Gunicorn is written here as well, under the same name.
+Both servers run the same Django configuration and name their log directory
+after themselves, so a request served over WebSockets leaves its trail in
+``daphne_logs/`` and not in ``gunicorn_logs/``.
+Look in both when you do not know which server handled the request.
+
 Here <x> must be replaced with **1** or **2** based on the site IDs. For more 
 information on site IDs, refer to the :doc:`site-level configuration docs
 <../references/config_files/project/site_yml>`.
+
+Celery
+......
+
+:Subdirectory:
+  server_logs/
+
+Background tasks run under a Celery worker, which Supervisor starts alongside
+the two servers.
+The worker names no server for itself, so its Django, core, permission and app
+logs collect in a directory of their own rather than under either server.
+
++----------------------+----------------------------+
+| Source               | Log file                   |
++======================+============================+
+| Django log           | <x>-django.log             |
++----------------------+----------------------------+
+| Omniport core log    | <x>-core.log               |
++----------------------+----------------------------+
+| Permission denials   | <x>-kernel_permissions.log |
++----------------------+----------------------------+
+| Service and app logs | <x>-<name>.log             |
++----------------------+----------------------------+
+
+.. note::
+
+  An app that does its work in a background task writes nothing to
+  ``gunicorn_logs/``. A task that fails leaves no trace in the directory most
+  people open first, so read ``server_logs/`` before concluding that an app
+  logged nothing at all.
 
 Supervisor
 ..........
@@ -124,6 +164,10 @@ The following is a map of the sources and log files for Supervisor.
 +-----------------+-------------------------+
 | Daphne stderr   | daphne-<x>-stderr.log   |
 +-----------------+-------------------------+
+| Celery stdout   | celery-<x>-stdout.log   |
++-----------------+-------------------------+
+| Celery stderr   | celery-<x>-stderr.log   |
++-----------------+-------------------------+
 
 Here <x> must be replaced with **1** or **2** based on the site IDs. For more 
 information on site IDs, refer to the :doc:`site-level configuration docs
@@ -137,7 +181,8 @@ capabilities have withstood the test of time.
 
 .. code-block:: console
 
-  docker@logs:/<logs_directory>$ tail -n <line_count> -f <log_file_name>
+  # cd <logs_directory>
+  # tail -n <line_count> -f <log_file_name>
 
 And there you have it. You are now armed with a comprehensive understanding of
 where to find logs to troubleshoot any and every error that could hit Omniport.
