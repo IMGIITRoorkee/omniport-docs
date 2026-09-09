@@ -1,0 +1,12 @@
+{%- if source_files %}
+  <h3>{{ _('Written from') }}</h3>
+  <ul class="this-page-menu">
+  {%- for source in source_files %}
+    <li>
+      <a href="{{ source.url }}" rel="nofollow"
+         title="{{ source.repo }}/{{ source.path }}">{{ source.name }}</a>
+      <br><small>{{ source.repo }}</small>
+    </li>
+  {%- endfor %}
+  </ul>
+{%- endif %}

@@ -53,6 +53,7 @@ extensions = [
     'sphinx.ext.viewcode',
 
     'edit_on_github',
+    'source_files',
 ]
 
 # Any paths that contain templates
@@ -124,6 +125,7 @@ html_sidebars = {
         'relations.html',
         'searchbox.html',
         'sourcelink.html',
+        'sourcefiles.html',
         'donate.html',
     ],
 }
@@ -245,3 +247,7 @@ todo_include_todos = True
 edit_on_github_project = 'IMGIITRoorkee/omniport-docs'
 edit_on_github_branch = 'master'
 edit_on_github_prefix = 'docs/source'
+
+# Source files
+source_files_org = 'IMGIITRoorkee'
+source_files_branch = 'master'
