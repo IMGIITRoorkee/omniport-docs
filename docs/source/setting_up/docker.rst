@@ -13,8 +13,17 @@ install Docker Compose.
 
   The Docker 
   `documentation <https://docs.docker.com/>`_
-  contains the links on install Docker and Docker Compose on your system of 
+  contains the links to install Docker and Docker Compose on your system of 
   choice.
+
+.. warning::
+
+  Omniport's scripts call ``docker-compose``, with a hyphen, which is the first
+  version of Compose. Current Docker packages ship the second version instead,
+  invoked as ``docker compose`` with a space, and do not provide the hyphenated
+  command at all. On such an installation every Compose command in this
+  documentation fails with ``docker-compose: command not found`` until you
+  either install the standalone binary or put a shim of that name on the path.
 
 Start and enable Docker
 -----------------------
@@ -37,9 +46,17 @@ The Docker daemon process ``dockerd`` is only accessible to users that are a
 part of the Docker group. 
 
 Remember ``apps`` from :doc:`Environments <../environments/index>` and
-:doc:`server configuration <server_configuration>`? So ``apps`` must a member of
-the group ``docker``, which is automatically created when Docker is first
+:doc:`server configuration <server_configuration>`? So ``apps`` must be a member
+of the group ``docker``, which is automatically created when Docker is first
 installed.
+
+.. warning::
+
+  Membership of the ``docker`` group is equivalent to being root on the host.
+  Anyone in it can start a container that mounts the whole filesystem and runs
+  as root inside it, which is unrestricted access by another name. Grant it as
+  deliberately as you would grant ``sudo``, and read the development section
+  below with that in mind, because it puts every developer in the same group.
 
 .. code-block:: console
 
@@ -82,6 +99,14 @@ To enable namespaces, elevate your privileges, open the file
 
 If you decided to go with an alternative name for the main user, replace 
 ``apps`` with the username of that user.
+
+.. note::
+
+  Remapping applies to the daemon as a whole, but the scripts that start the
+  development servers opt themselves out of it, because a remapped root would
+  give the wrong ownership to the source tree they mount from the host. So the
+  containers a developer runs are not remapped even when the setting is on, and
+  only the ones Compose starts are.
 
 You will need to restart the Docker daemon after this change.
 

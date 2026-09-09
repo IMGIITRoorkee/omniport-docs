@@ -7,29 +7,44 @@ could be any flavour of Linux, such as Ubuntu, Fedora or RHEL, to name a few.
 Ports
 -----
 
-Ensure that no other services are running on the ports specified below, 
-especially those marked with an asterisk.
+Only some of the ports Omniport uses are bound on the host. Those are the ones
+that have to be free before you start. The rest are reached over the container
+network, and something else on the host may hold them without any conflict
+arising.
 
-=============== =====================
+Bound on the host
++++++++++++++++++
+
+=============== =======================================
  Port            Designated use
-=============== =====================
- 80*             NGINX http
- 443*            NGINX https
+=============== =======================================
+ 80              NGINX http
+ 443             NGINX https
+ 15672           RabbitMQ management
+ 60000 - 60031   Django development, one per developer
+ 61000 - 61031   React development, one per developer
+=============== =======================================
+
+The two ranges at the end are bound only on a development machine, and only one
+port from each is taken per running server.
+
+Internal to the container network
++++++++++++++++++++++++++++++++++
+
+=============== ====================================
+ Port            Designated use
+=============== ====================================
  5432            PostgreSQL
  5672            RabbitMQ
- 15672*          RabbitMQ management
  11211           Memcached
- 6379            Redis
+ 6379            Redis, on each of its five instances
  8000            Gunicorn
  8001            Daphne
- 8081*           Redis Commander
- 60000 - 60031   Django development
- 61000 - 61031   React development
-=============== =====================
+=============== ====================================
 
-In the most common scenarios, 80 and 443 will be occupied on a fresh install 
-of a server distribution like RHEL or Ubuntu Server. Stop Apache2 and prevent
-it from automatically starting up again.
+If a web server is already running on the machine it will be holding 80 and
+443, and it has to be stopped and kept from starting again. The unit is named
+``apache2`` on Debian and Ubuntu and ``httpd`` on RHEL and Fedora.
 
 .. code-block:: console
 
@@ -39,7 +54,7 @@ it from automatically starting up again.
 Users
 -----
 
-Set up a user other than ``root`` to build and manage the containers. Name him 
+Set up a user other than ``root`` to build and manage the containers. Name it 
 ``apps`` or whatever you fancy.
 
 In case of a development setup, make user accounts for all your developers, one

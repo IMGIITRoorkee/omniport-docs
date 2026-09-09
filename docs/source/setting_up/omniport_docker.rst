@@ -6,15 +6,24 @@ Clone Omniport Docker from
 and enter the directory.
 
 Inside the directory ``omniport-docker/`` you must clone the codebase of 
-Omniport, namely the backend and the frontend. Enter the ``codebase/`` directory
-and then clone both ``omniport-backend`` and ``omniport-frontend`` repositories
-from GitHub. 
+Omniport, namely the backend and the frontend. Create a ``codebase/`` directory,
+enter it, and then clone both ``omniport-backend`` and ``omniport-frontend``
+repositories from GitHub. 
+
+.. warning::
+
+  Keep the clone of ``omniport-docker`` under that name. The scripts that start
+  the development servers attach to a Docker network whose name Compose derives
+  from the directory the project sits in, and they spell that name out in full.
+  Rename the directory and every developer's server fails to start.
 
 .. note::
 
   You may use the 
   :doc:`clone codebase script <../references/scripts/docker/clone/everything>` 
-  to accomplish the same goal.
+  to accomplish the same goal. It deletes and recreates ``codebase/`` before it
+  starts, so run it before you write any configuration rather than after, and
+  never on an instance you have already set up.
 
 Configuring the environment
 ---------------------------
@@ -87,9 +96,10 @@ Build the Dockerfiles
 ---------------------
 
 There are quite a few images to be built which, thanks to Omniport's liberal use
-of scripts, translates to executing just as many shell commands. All these
+of scripts, translates to executing just as many shell commands. Most of these
 scripts are interactive, which means you will be asked questions, whose answers
-will determine the end result of the operation.
+will determine the end result of the operation. Build them after cloning the
+codebase, not before, because two of them copy dependency manifests out of it.
 
 Maybe one day we will write a script that runs these scripts.
 
@@ -104,3 +114,10 @@ Maybe one day we will write a script that runs these scripts.
   [apps omniport-docker]$ ./scripts/build/redis.sh
   
 That's all. Omniport Docker is ready to roll.
+
+.. note::
+
+  The React image is not one of the containers Omniport runs. It exists so that
+  the frontend can be built inside it, which is the first step of
+  :doc:`deploying <production>`, so build it here even though nothing in the
+  Compose file uses it.
