@@ -1,3 +1,8 @@
+:sourcefiles:
+  omniport-docker/scripts/start/development.sh
+  omniport-backend/scripts/start/django.sh
+  omniport-frontend/scripts/start/react.sh
+
 Development
 ===========
 

@@ -1,3 +1,6 @@
+:sourcefiles:
+  omniport-docker/docker-compose.yml
+
 ... monitor health?
 ===================
 

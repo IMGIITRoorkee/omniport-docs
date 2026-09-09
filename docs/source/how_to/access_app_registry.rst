@@ -1,3 +1,6 @@
+:sourcefiles:
+  omniport-backend/omniport/core/discovery/available.py
+
 ... access app registry?
 ========================
 

@@ -1,3 +1,8 @@
+:sourcefiles:
+  omniport-docker/docker-compose.yml
+  omniport-backend/pyproject.toml
+  omniport-frontend/omniport/package.json
+
 The stack
 =========
 

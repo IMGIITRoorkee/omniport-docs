@@ -1,3 +1,7 @@
+:sourcefiles:
+  omniport-backend/omniport/omniport/settings/base/discovery.py
+  omniport-backend/omniport/core/kernel/management/commands/collectdaemon.py
+
 ... migrate database?
 =====================
 

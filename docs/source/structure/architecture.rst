@@ -1,3 +1,7 @@
+:sourcefiles:
+  omniport-backend/omniport/core/discovery/discovery.py
+  omniport-frontend/omniport/discovery.js
+
 Architecture
 ============
 
