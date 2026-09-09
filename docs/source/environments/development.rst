@@ -44,8 +44,13 @@ The postulates of the development workflow are:
     
   These servers can be accessed in a browser on the developer's local terminal
   by visiting ``http://<server_IP>:<port>/``.
+
+  .. note::
+
+    The React script links itself to a Django container named ``60000``, whichever port you hand it with ``-d``.
+    A Django server must therefore be running on port 60000 before any React server will start, and on a shared machine that server will not necessarily be yours.
     
-If this is not your setup and you are not in a postition for this to be your 
+If this is not your setup and you are not in a position for this to be your 
 setup, you are, unfortunately, on your own for this one. See if our production
 setup suits you more, but that's about as far as we can go.
 
