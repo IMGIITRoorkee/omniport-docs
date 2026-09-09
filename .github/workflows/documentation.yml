@@ -18,13 +18,9 @@ jobs:
         python-version: '3.11'
         cache: pip
 
-    # Upgrade first so the run sees the setuptools a fresh Read the Docs build
-    # would, rather than the older one the runner's venv happens to bundle.
     - run: pip install --upgrade pip setuptools
 
     - run: pip install -r requirements.txt
 
-    # Warnings are errors. A malformed table and a heading underline shorter
-    # than its heading are both warnings, and both have reached the live site.
     - run: make html SPHINXOPTS="-W --keep-going -n"
       working-directory: docs
