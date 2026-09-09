@@ -59,11 +59,14 @@ Omniport Docs
 Where the published documentation comes from
 --------------------------------------------
 
-Merging to ``master`` publishes the documentation. The build runs from
-``requirements.txt``, which is a second list of the same pinned packages,
-maintained by hand alongside ``Pipfile.lock``. Nothing keeps the two in step,
-so change both together or the published build will differ from the one you
-tested locally.
+Merging to ``master`` publishes the documentation. The build installs
+``requirements.txt``, which holds what Sphinx needs and nothing else. The live
+reload tooling lives in ``requirements-dev.txt``, which pulls the build set in,
+so install that one if you are editing rather than only building.
+
+Both are maintained by hand alongside ``Pipfile.lock`` and nothing keeps them in
+step, so a dependency change has to be made in both places or the published
+build will differ from the one you tested locally.
 
 Cannot start the virtual environment?
 -------------------------------------
