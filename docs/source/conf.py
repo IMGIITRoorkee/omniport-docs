@@ -2,6 +2,11 @@
 # Configuration file for the Sphinx documentation builder #
 ###########################################################
 
+import os
+import sys
+
+sys.path.insert(0, os.path.abspath('_ext'))
+
 # This file does only contain a selection of the most common options. 
 # For a full list see the documentation:
 # http://www.sphinx-doc.org/en/master/config
@@ -46,6 +51,8 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
+
+    'edit_on_github',
 ]
 
 # Any paths that contain templates
@@ -106,6 +113,19 @@ html_theme_options = {
 
     'code_font_size': '1em',
     'code_font_family': '"Fira Code", monospace',
+}
+
+# Alabaster drops sourcelink.html from its default sidebar, so the whole set
+# has to be named to get the Edit on GitHub links back.
+html_sidebars = {
+    '**': [
+        'about.html',
+        'navigation.html',
+        'relations.html',
+        'searchbox.html',
+        'sourcelink.html',
+        'donate.html',
+    ],
 }
 
 # Path to the favicon of the site
@@ -220,3 +240,8 @@ texinfo_documents = [
 
 # To-do
 todo_include_todos = True
+
+# Edit on GitHub
+edit_on_github_project = 'IMGIITRoorkee/omniport-docs'
+edit_on_github_branch = 'master'
+edit_on_github_prefix = 'docs/source'
