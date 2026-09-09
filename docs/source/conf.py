@@ -83,7 +83,7 @@ html_theme_options = {
     
     # GitHub
     'github_user': 'IMGIITRoorkee',
-    'github_repo': 'omniport-docker',
+    'github_repo': 'omniport-docs',
     'github_banner': 'github_banner.svg',
     'github_button': False,
 
