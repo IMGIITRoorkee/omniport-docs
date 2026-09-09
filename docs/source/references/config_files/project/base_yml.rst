@@ -1,3 +1,6 @@
+:sourcefiles:
+  omniport-backend/configuration/base_stencil.yml
+
 ``base.yml`` on the backend
 ===========================
 

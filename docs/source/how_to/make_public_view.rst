@@ -1,3 +1,8 @@
+:sourcefiles:
+  omniport-frontend/omniport/core/App.js
+  omniport-frontend-student-profile/config.json
+  omniport-backend/omniport/omniport/settings/third_party/drf.py
+
 ... make a public view for an app?
 ==================================
 
