@@ -42,17 +42,18 @@ None of it is required to sign in.
 - An address, including its city, state, postal code and coordinates where you
   supply them
 - Links to your profiles on other sites
-- Personal details recorded by particular applications, which across the
-  installed set can include date of birth, blood group, gender, sex, pronoun
-  and any impairment you declare, and, where an application needs them,
-  financial details such as a bank account and annual income, and identifiers
-  such as a passport or driving licence number
+- Some applications record more than the portal itself needs. Depending on
+  which are installed, this can include your date of birth, blood group,
+  gender, sex, pronoun and any impairment you declare; your religion and
+  reservation category; your passport and driving licence numbers; and
+  financial details such as a bank account and annual income
 
 .. warning::
 
-  The last group is unusually sensitive and not every application asks for it.
-  An application collects it only when its own purpose requires it, and it is
-  visible only to the people that application shows it to.
+  You can see and change your own financial and political information through
+  Settings. Some of it is also visible to the staff who administer the service
+  that needs it: the hostel application, for instance, shows a resident's date
+  of birth and reservation category to the people managing that hostel.
 
 Produced by your use of the portal
 ++++++++++++++++++++++++++++++++++
@@ -131,9 +132,12 @@ Sessions last until you sign out or the session expires.
 Tokens issued to applications expire on their own, and a token you revoke stops
 working immediately.
 
-Records that come from the institute last as long as the institute keeps them.
-Leaving the institute ends your access, and what remains after that is a matter
-for the institute rather than for the portal.
+Everything else is kept indefinitely.
+Leaving the institute ends your access to the portal, but it does not delete
+what the portal holds about you, and your enrolment, contact and personal
+information stay in the database after you have gone.
+If you want something removed, write to us, though whether it can be removed
+depends on whether the institute still needs it.
 
 What you can do
 ---------------
@@ -149,8 +153,9 @@ Records that come from the institute cannot be changed in the portal, because
 the portal is not where they are kept.
 Correcting one means correcting it at its source, with the office that holds it.
 
-For anything else, including a request to see what is held about you or to
-raise a complaint, write to IMG at the address below.
+For anything else, including a request to see what is held about you, to have
+something corrected or removed, or to raise a complaint, write to IMG at
+img@iitr.ac.in.
 
 Keeping it safe
 ---------------
@@ -172,6 +177,8 @@ what changed and when is a matter of record.
 
 Contacting us
 -------------
+
+Write to img@iitr.ac.in, or by post.
 
 ::
 
